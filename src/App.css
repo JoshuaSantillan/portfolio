@@ -1,0 +1,121 @@
+/* Main container */
+.App {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Individual components */
+.component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.component.active {
+  opacity: 1;
+}
+
+
+/* Section Transition */
+.component:not(.active) {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translateY(-100%);
+}
+
+.component.active + .component:not(.active) {
+  visibility: hidden;
+  transform: translateY(0);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #00adb5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.1);
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+nav ul li:hover {
+  background-color: #393e46;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+nav ul li.active {
+  background-color: #393e46;
+}
+
+nav ul li.active:hover {
+  background-color: #393e46;
+}
+
+/* Individual component styles */
+.Resume {
+  background-color: #393e46;
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.About {
+  background-color: #222831;
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Experience {
+  background-color: #00adb5;
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Education {
+  background-color: #eeeeee;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contact {
+  background-color: #393e46;
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
