@@ -1,45 +1,24 @@
-import React, { useState } from 'react';
-import Resume from './resume';
-import About from './About';
-import Experience from './Experience';
-import Education from './Education';
-import Contact from './Contact';
-import './App.css'
+import React from "react";
+import "./App.css";
+import Navbar from "./pages/Navbar";
+import About from "./pages/About";
+import Resume from "./pages/Resume";
+import ProjectsGallery from "./pages/ProjectsGallery";
+import Backlog from "./pages/Backlog";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [activeComponent, setActiveComponent] = useState(null);
-
-  const handleClick = (componentName) => {
-    setActiveComponent(componentName);
-  };
-
   return (
-    <div className="App">
-      <div className={`component ${activeComponent === "About" ? "active" : ""}`}>
-        <About />
-      </div>
-      <div className={`component ${activeComponent === "Resume" ? "active" : ""}`}>
-        <Resume />
-      </div>
-      <div className={`component ${activeComponent === "Experience" ? "active" : ""}`}>
-        <Experience />
-      </div>  
-      <div className={`component ${activeComponent === "Education" ? "active" : ""}`}>
-        <Education />
-      </div>
-      <div className={`component ${activeComponent === "Contact" ? "active" : ""}`}>
-        <Contact />
-      </div>
-      <nav>
-        <ul>
-          <li onClick={() => handleClick("About")}>About</li>
-          <li onClick={() => handleClick("Resume")}>Resume</li>
-          <li onClick={() => handleClick("Experience")}>Experience</li>
-          <li onClick={() => handleClick("Education")}>Education</li>
-          <li onClick={() => handleClick("Contact")}>Contact</li>
-        </ul>
-      </nav>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/projectsgallery" element={<ProjectsGallery />} />
+        <Route path="/backlog" element={<Backlog />} />
+      </Routes>
+    </>
   );
 }
 

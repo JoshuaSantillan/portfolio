@@ -1,0 +1,46 @@
+/* Navigation */
+.nav-page{
+  font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #05161A;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.1);
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+nav ul li:hover {
+  background-color: #0C7075;
+}
+
+nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0; /* Move the padding from li to here, and only apply it vertically */
+  color: #f2f2f2;
+  text-decoration: none;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+nav ul li.active {
+  background-color: #0C7075;
+}
+
+nav ul li.active:hover {
+  background-color: #0C7075;
+}
