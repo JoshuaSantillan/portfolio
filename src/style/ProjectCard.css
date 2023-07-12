@@ -37,38 +37,40 @@
   transition: opacity 300ms ease-in;
 }
 
-.project-card {
+.card{
   padding: 10px;
   margin-top: 10px;
   text-align: center;
   cursor: pointer;
   width:100%;
   height: auto;
+
 }
 
-.project-card img {
+.card img {
   max-width: 100%;
   height: auto;
   margin-bottom: 5px; /* card title */
+
 }
 
-.project-card-inner {
-  border: 1px solid #cccccc;
-  padding: 20px;
+.card-inner {
+  border: none;
+  padding: 5px;
   max-width: 300px;
   max-height: 300px;
   margin: auto;
 }
 
 @media (min-width: 768px) { /* for medium screens and up */
-  .project-card img {
+  .card img {
     height: 200px; /* set a fixed height */
     object-fit: cover; /* cover so the image covers the whole area */
   }
 }
 
 @media (min-width: 992px) { /* for large screens and up */
-  .project-card img {
+  .card img {
     height: 250px; /* set a slightly larger fixed height for large screens */
   }
 }
@@ -79,7 +81,7 @@
 }
 
 .filter-button {
-  background-color: #072e33;
+  background-color: #294d61;
   color: #f2f2f2;
   border: none;
   padding: 10px 20px;

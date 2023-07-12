@@ -1,11 +1,11 @@
 .resume-title{
-  color: #356b74
+  color: white;
 }
 .resume-page{
   font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
 .btn-primary{
-    --bs-btn-bg: #072e33 !important;
+    --bs-btn-bg: #0C7075 !important;
     --bs-btn-border-color: #072e33 !important;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #393e46 !important;

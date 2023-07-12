@@ -3,7 +3,7 @@ import '../style/Backlog.css'
 
 function Backlog() {
   return (
-    <div className="backlog-page">
+    <div className="backlog-page container-fluid row">
       <h2 className="backlog-title">Backlog</h2>
       <h3 className="todo-title">To Do:</h3>
       <div className="shiftCenter">

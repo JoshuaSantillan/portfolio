@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import '../style/ProjectCard.css';
 import ProjectDetails, { projects } from './ProjectDetails';
-// eslint-disable-next-line
+import ProjectCard from './ProjectCard'
+import ColorGame from '../components/ColorGame/ColorGame';
 
-const ProjectCard = ({ project, onSelect }) => {
-  return (
-    <div className="project-card" onClick={() => onSelect(project)}>
-      <img src={project.image} alt={project.name} />
-      <h3>{project.name}</h3>
-    </div>
-  );
+const DetailedView = ({ project }) => {
+  if (project.id === 'colorGame') {
+    return (
+        <div className="detailed-view">
+            <ColorGame />
+        </div>
+    );
+} else {
+    return (
+      <div className="detailed-view">
+        <ProjectDetails project={project} />
+      </div>
+    );
+  }
 };
 
-const DetailedView = ({ project, onBack }) => {
-  return (
-    <div className="detailed-view">
-      <ProjectDetails project={project} />
-    </div>
-  );
-};
 
 const ProjectsGallery = () => {
   const [selectedTag, setSelectedTag] = useState(null);

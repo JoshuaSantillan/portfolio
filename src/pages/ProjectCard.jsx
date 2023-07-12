@@ -3,10 +3,10 @@ import '../style/ProjectCard.css';
 
 const ProjectCard = ({ project, onSelect }) => {
   return (
-    <div className="project-card" onClick={() => onSelect(project)}>
-      <div className="project-card-inner">
-        <img src={project.image} alt={project.name} />
-        <h3>{project.name}</h3>
+    <div className="card bg-dark text-white" onClick={() => onSelect(project)}>
+      <div className="card-inner">
+        <img className="card-img" src={project.image} alt={project.name} />
+        <div className='card-title'>{project.name}</div>
       </div>
     </div>
   );

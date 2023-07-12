@@ -1,0 +1,18 @@
+.project-media img{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px; /* card title */
+
+}
+@media (min-width: 768px) { /* for medium screens and up */
+  .project-media img{
+    height: 200px; /* set a fixed height */
+    object-fit: fit; /* cover so the image covers the whole area */
+  }
+}
+
+@media (min-width: 992px) { /* for large screens and up */
+  .project-media img {
+    height: 250px; /* set a slightly larger fixed height for large screens */
+  }
+}

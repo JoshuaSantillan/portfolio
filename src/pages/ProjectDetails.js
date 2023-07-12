@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/ProjectDetails.css';
 export const projects = [
   {
     name: "Fragment Shader",
@@ -55,12 +56,13 @@ export const projects = [
     videos: [process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_VIDEO_0],
   },
   {
+    id: "colorGame",
     name: "Color Game",
     tags: ['Web'],
     image: process.env.REACT_APP_PORTFOLIO_PROJECT_HTML_0,
     description: 'This is a Houdini project.',
     summary: 'Summary for Cloth simulator',
-  }
+}
 ];
 
 const ProjectDetails = ({ project }) => {
