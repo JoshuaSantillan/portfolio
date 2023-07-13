@@ -8,7 +8,6 @@
   line-height: 1.1;
 }
 
-
 .selected{
   color: white;
   background-color: #0C7075;
@@ -33,11 +32,21 @@
 
 
 .cg-container{
-  max-width: 600px;
+  max-width: 550px;
   margin: auto;
   margin-bottom: 70px;  /* Adjust as needed depending on the size of your navbar */
 }
-
+@media (min-width: 768px) { /* for medium screens and up */
+  .cg-container {
+    max-width:490px; 
+  }
+}
+@media (min-width: 400px) { /* for large screens and up */
+  .cg-container {
+    max-width:480px; 
+  }
+  
+}
 
 .square{
   width: 30%; /* specify the width */
@@ -53,15 +62,16 @@
 
 
 #colorDisplay{
-  font-size: 200%;
+  font-size: 180%;
 }
+
 #message{
   color:white;
-  width: 20%;
+  width: 100%;
+  background-color: #072e33;
 }
 
 #stripe{
   background-color: #05161A;
   height: 2em;
 }
-

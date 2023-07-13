@@ -42,7 +42,7 @@ function ColorGame() {
       setMessage("Nice job!");
       setColors(Array(numSquares).fill(color));
     } else {
-      setMessage("Sorry, Try Again");
+      setMessage("Sorry, Guess Again");
       setColors(colors.map(c => c === color ? '#072e33' : c));
     }
   };
@@ -65,26 +65,17 @@ function ColorGame() {
         <Row id="stripe" className="justify-content-center flex-column flex-sm-row">
           <Col xs="12" sm="auto" className="text-center">
             <Button onClick={reset} className="cg-button btn-sm" variant="info">New Colors</Button>
-          </Col>
-          <Col xs="12" sm="auto" className="text-center">
-            <span id="message">{message}</span>
-          </Col>
-          <Col xs="12" sm="auto" className="text-center">
             <Button className="mode cg-button btn-sm" onClick={() => handleDifficultyChange('Easy')} variant="info">Easy</Button>
-          </Col>
-          <Col xs="12" sm="auto" className="text-center">
             <Button className="mode cg-button btn-sm" onClick={() => handleDifficultyChange('Hard')} variant="info">Hard</Button>
-          </Col>
-          <Col xs="12" sm="auto" className="text-center">
             <Button className="mode cg-button btn-sm" onClick={() => handleDifficultyChange('Very Hard')} variant="info">Very Hard</Button>
           </Col>
         </Row>
-
+        <Row>
+          <span id="message">{message}</span>
+        </Row>
       </div>
 
-      <Container fluid className="p-2 text-white ">
-
-
+      <Container fluid className="p-2">
         <div className="cg-container">
           {colors.map((color, i) => (
             <div
