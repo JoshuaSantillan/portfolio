@@ -9,7 +9,7 @@ function About() {
         {/* Image and social icons column */}
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
           <img src={process.env.REACT_APP_PORTFOLIO_ABOUT_IMAGE} alt="Profile" className="profile-image img-fluid rounded" />
-          <p className="prototype-text"> prototype v0.1 </p>
+          <p className="prototype-text"> prototype v1.0 </p>
           {/* Social Medias */}
           <SocialMediaNav />
         </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Container, Row, Col } from 'react-bootstrap';
-import ProjectDetails, { projects } from './ProjectDetails';
-import ProjectCard from './ProjectCard'
+import ProjectDetails, { projects } from '../components/ProjectDetails/ProjectDetails';
+import ProjectCard from '../components/ProjectCard/ProjectCard'
 import ColorGame from '../components/ColorGame/ColorGame';
 
 const DetailedView = ({ project }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/ProjectDetails.css';
+import './ProjectDetails.css';
 export const projects = [
   {
     name: "Fragment Shader",

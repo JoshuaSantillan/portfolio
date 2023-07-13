@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/SkillsChart.css';
+import './SkillsChart.css';
 
 const SkillsChart = () => {
   const skills = [

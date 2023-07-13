@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/ProjectCard.css';
+import './ProjectCard.css';
 
 const ProjectCard = ({ project, onSelect }) => {
   return (

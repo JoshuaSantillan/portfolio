@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../style/common.css';
 import '../style/resume.css';
-import SkillsChart from './SkillsChart';
+import SkillsChart from "../components/SkillsChart/SkillsChart";
 
 function Resume() {
   const [showPdf, setShowPdf] = useState(true);
