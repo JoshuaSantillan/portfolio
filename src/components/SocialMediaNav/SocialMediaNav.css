@@ -64,6 +64,7 @@
 .wrapper .linkedin:hover .tooltip::before {
   background: #0077b5;
   color: #fff;
+  border-radius: 35%;
 }
 
 .wrapper .spotify:hover,
@@ -71,6 +72,7 @@
 .wrapper .spotify:hover .tooltip::before {
   background: #1DB954;
   color: #fff;
+  border-radius: 35%;
 }
 
 .wrapper .instagram:hover,
@@ -78,6 +80,7 @@
 .wrapper .instagram:hover .tooltip::before {
   background: #C13584;
   color: #fff;
+  border-radius: 35%;
 }
 
 .wrapper .github:hover,
@@ -85,4 +88,5 @@
 .wrapper .github:hover .tooltip::before {
   background: #181717;
   color: #fff;
+  border-radius: 35%;
 }

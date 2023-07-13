@@ -3,16 +3,14 @@ import '../style/Backlog.css'
 
 function Backlog() {
   return (
-    <div className="backlog-page container-fluid row">
+    <div className="backlog-page text-center text-white">
       <h2 className="backlog-title">Backlog</h2>
       <h3 className="todo-title">To Do:</h3>
       <div className="shiftCenter">
       <ul className="todo-list">
         <li>Documentation</li>
         <li>Finish Color Swatch Theme</li>
-        <li>Import Color Game Into React</li>
         <li>Hamburger Menu for small screen</li>
-        <li>Social Medias</li>
         <li>Load multiple PDF Projects / Resume</li>
         <li>Footer</li>
         <li>Change architecture of project cards on click</li>

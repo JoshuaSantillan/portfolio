@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { Container, Row, Col } from 'react-bootstrap';
 import ProjectDetails, { projects } from './ProjectDetails';
 import ProjectCard from './ProjectCard'
 import ColorGame from '../components/ColorGame/ColorGame';
@@ -7,11 +8,11 @@ import ColorGame from '../components/ColorGame/ColorGame';
 const DetailedView = ({ project }) => {
   if (project.id === 'colorGame') {
     return (
-        <div className="detailed-view">
-            <ColorGame />
-        </div>
+      <div className="detailed-view">
+        <ColorGame />
+      </div>
     );
-} else {
+  } else {
     return (
       <div className="detailed-view">
         <ProjectDetails project={project} />
@@ -19,7 +20,6 @@ const DetailedView = ({ project }) => {
     );
   }
 };
-
 
 const ProjectsGallery = () => {
   const [selectedTag, setSelectedTag] = useState(null);
@@ -50,14 +50,17 @@ const ProjectsGallery = () => {
               </button>
             ))}
           </div>
+
           {/* Cards Large, medium and small responsive */}
-          <div className="row container-fluid">
-            {filteredProjects.map((project, index) => (
-              <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
-                <ProjectCard project={project} onSelect={setSelectedProject} />
-              </div>
-            ))}
-          </div>
+          <Container fluid className="p-2">
+            <Row className="justify-content-center flex-column flex-sm-row">
+              {filteredProjects.map((project, index) => (
+                <Col xs="12" sm="auto" className="text-center">
+                  <ProjectCard index={index} project={project} onSelect={setSelectedProject} />
+                </Col>
+              ))}
+            </Row>
+          </Container>
 
         </div>
       </CSSTransition>

@@ -1,6 +1,11 @@
-.project-page{
+.project-page{ 
+   padding-bottom: 500px;
+}
+
+.project-page {
   font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
+
 .project-list-enter {
   opacity: 0;
 }
@@ -19,6 +24,69 @@
   transition: opacity 300ms ease-in;
 }
 
+.filter-button {
+  background-color: #294d61;
+  color: #f2f2f2;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.filter-button:hover {
+  background-color: #393e46;
+}
+
+.card {
+  padding: 2px;
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  /* card title */
+
+}
+
+.card-inner {
+  border: none;
+  padding: 5px;
+  max-width: 300px;
+  max-height: 300px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+
+  /* for medium screens and up */
+  .card img {
+    height: 200px;
+    /* set a fixed height */
+    object-fit: cover;
+    /* cover so the image covers the whole area */
+  }
+}
+
+@media (min-width: 992px) {
+  /* for large screens and up */
+  .card img {
+    height: 250px;
+    /* set a slightly larger fixed height for large screens */
+  }
+}
+
+.detailed-view {
+  text-align: center;
+  padding: 10px;
+}
+
 .detailed-view-enter {
   opacity: 0;
 }
@@ -35,61 +103,4 @@
 .detailed-view-exit-active {
   opacity: 0;
   transition: opacity 300ms ease-in;
-}
-
-.card{
-  padding: 10px;
-  margin-top: 10px;
-  text-align: center;
-  cursor: pointer;
-  width:100%;
-  height: auto;
-
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 5px; /* card title */
-
-}
-
-.card-inner {
-  border: none;
-  padding: 5px;
-  max-width: 300px;
-  max-height: 300px;
-  margin: auto;
-}
-
-@media (min-width: 768px) { /* for medium screens and up */
-  .card img {
-    height: 200px; /* set a fixed height */
-    object-fit: cover; /* cover so the image covers the whole area */
-  }
-}
-
-@media (min-width: 992px) { /* for large screens and up */
-  .card img {
-    height: 250px; /* set a slightly larger fixed height for large screens */
-  }
-}
-
-.detailed-view {
-  text-align: center;
-  padding: 10px;
-}
-
-.filter-button {
-  background-color: #294d61;
-  color: #f2f2f2;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.filter-button:hover {
-  background-color: #393e46;
 }

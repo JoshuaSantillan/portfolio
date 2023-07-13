@@ -12,6 +12,4 @@ const ProjectCard = ({ project, onSelect }) => {
   );
 };
 
-
-
 export default ProjectCard;
