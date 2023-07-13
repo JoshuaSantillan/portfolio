@@ -52,10 +52,10 @@ const ProjectsGallery = () => {
           </div>
 
           {/* Cards Large, medium and small responsive */}
-          <Container fluid className="p-2">
-            <Row className="justify-content-center flex-column flex-sm-row">
+          <Container fluid className="p-2 card-container">
+            <Row className="justify-content-center flex-sm-row">
               {filteredProjects.map((project, index) => (
-                <Col xs="12" sm="auto" className="text-center">
+                <Col xs="9" sm="auto" className="text-center">
                   <ProjectCard index={index} project={project} onSelect={setSelectedProject} />
                 </Col>
               ))}

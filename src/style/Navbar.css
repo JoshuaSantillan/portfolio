@@ -1,7 +1,7 @@
 /* Navigation */
 .nav-page{
   font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
-  z-index: 1000;
+  z-index: 2000;
   position: relative;
 }
 nav ul {

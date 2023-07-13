@@ -93,7 +93,7 @@ const ProjectDetails = ({ project }) => {
       {/* PDF Link */}
       {project.pdf && (
         <div className="project-pdf">
-          <a href={process.env.PUBLIC_URL + project.pdf} target="_blank" rel="noopener noreferrer">
+          <a href={project.pdf} target="_blank" rel="noopener noreferrer">
             View Write-up
           </a>
         </div>
