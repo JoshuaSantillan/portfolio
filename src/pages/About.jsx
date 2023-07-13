@@ -17,15 +17,18 @@ function About() {
         <div className="col-lg-8 col-md-6 col-sm-12">
           <h2 className="about-title">About Me</h2>
           <div className="about-me-text">
-            <p>Hello, my name is Joshua Andrew Santillan and I like turtles</p>
-            <p>🐢</p>
-            <p>Hello! I'm Joshua Andrew, a UC San Diego Computer Science graduate fueled by curiosity and innovation with a goal to excel in the dynamic tech industry. With a solid academic foundation and hands-on experience in cutting-edge research projects, I am eager to start my career journey, contributing to the growth of technology and development.
+            <p>Hello, my name is Joshua Andrew Santillan and I like turtles 🐢</p>
+            <p></p>
+            <p>I am 27 years old currently located in San Diego. I obtained my computer science and engineering degree from UC San Diego in 2023.
             </p>
             <p>
-              At UC San Diego, I was given the opportunity to tackle innovative research projects such as optimizing geographically distributed workloads and exploring the ever-growing realm of cloud data migration. The collection and analysis of power-grid data have contributed to more sustainable and eco-friendly data center operations across the globe. Working with technology for a carbon-aware system that efficiently deploys jobs geographically required us to use technologies such as Docker, Kubernetes, MQTT, RESTful API, and the National Research Platform (NRP).
+            I first became interested in computers in 2001 when I was exposed to RuneScape Online. From an early age, I've been an avid web surfer, researching various topics and chatting with strangers across the globe. I have been able to witness the transition from the static web pages of Web 1.0, to the rise of social media and shared content in Web 2.0, and the current ongoing transition into a modern, more intelligent Web 3.0. 
             </p>
-            <p>
-              I am excited to join a company where I can continue to grow, acquire new skills, and contribute to a rapidly evolving industry. I am itching to jump on the train of cutting-edge technology and development, making a lasting impact on my career path. If you're looking for a highly motivated, curious, and eager-to-learn individual, I am the perfect candidate to join your team.</p>
+            <p>When I'm not at my computer, well, then I must be sleeping.<br />
+               Okay okay, when I'm not at my computer I am exploring nature pretending that technology hasn't been invented yet, grabbing a coffee/boba (taro milk tea),
+               getting stuck in a musical trance, or fabricating never before seen memes (wait don't you have to be at your comptuter for that?)
+          </p>
+            
           </div>
         </div>
       </div>
