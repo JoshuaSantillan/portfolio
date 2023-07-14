@@ -4,15 +4,17 @@
 /* Main container */
 .App {
   position: relative;
- /* text-align: center; */
+  /* text-align: center; */
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  font-family: 'Roboto', 'Montserrat', 'Poppins', sans-serif  !important;
+  font-family: 'Roboto', 'Montserrat', 'Poppins', sans-serif !important;
 }
 
-body, html {
-  overflow-x: hidden; /* Hide horizontal scrollbar on the whole page */
+body,
+html {
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar on the whole page */
 }
 
 /* Individual components */
@@ -40,7 +42,7 @@ body, html {
   transform: translateY(-100%);
 }
 
-.component.active + .component:not(.active) {
+.component.active+.component:not(.active) {
   visibility: hidden;
   transform: translateY(0);
 }

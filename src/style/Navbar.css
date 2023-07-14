@@ -44,6 +44,7 @@
   overflow-y: none;
   border-radius: 5%;
 }
+
 .nav-page.open {
   transform: translateX(0);
 }
@@ -111,30 +112,35 @@ nav ul li.active:hover {
 
 /* Media query for screens larger than 768px */
 @media (min-width: 768px) {
+
   .nav-page,
   .burger {
-    display: none;  /* Hide mobile nav and burger for larger screens */
+    display: none;
+    /* Hide mobile nav and burger for larger screens */
   }
 
   .nav-desktop {
-    display: flex;  /* Show desktop nav for larger screens */
+    display: flex;
+    /* Show desktop nav for larger screens */
     position: relative;
     z-index: 15;
   }
 }
+
 /* Media query for screens smaller than 768px */
 @media (max-width: 767px) {
   .burger {
-    display: grid;  /* Show burger for smaller screens */
+    display: grid;
+    /* Show burger for smaller screens */
   }
 
   .nav-desktop {
-    display: none; /* Hide desktop nav for smaller screens */
+    display: none;
+    /* Hide desktop nav for smaller screens */
   }
 
   .nav-page ul {
-    display: block; /* Display the links vertically on smaller screens */
+    display: block;
+    /* Display the links vertically on smaller screens */
   }
 }
-
-

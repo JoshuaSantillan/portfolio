@@ -9,14 +9,12 @@ function Backlog() {
       <h3 className="todo-title"><br />To Do:</h3></a>
       <div className="shiftCenter">
         <ul className="todo-list">
-          <li>Project Card Images Have Same Size</li>
-          <li>Finish Components for each project</li>
           <li>Finish Color Swatch Theme</li>
           <li>Gradient cards</li>
-          <li>Link to other people's sites</li>
-          <li>Footer</li>
-          <li>Documentation (would put this at the bottom)</li>
+          <li>Finish Project Details</li>
           <li>Super Topic Secret Three.js Background</li>
+          <li>Footer</li>
+          <li>Link to other people's sites</li>
           <li>Fix Router to work on GH Pages or buy domain</li>
         </ul>
       </div>

@@ -46,7 +46,6 @@
   height: auto;
   margin-bottom: 5px;
   /* card title */
-
 }
 
 .card-inner {
@@ -58,21 +57,17 @@
 }
 
 @media (min-width: 768px) {
-
   /* for medium screens and up */
   .card img {
-    height: 300px;
-    /* set a fixed height */
+    height: 250px;
     object-fit: cover;
-    /* cover so the image covers the whole area */
   }
 }
 
 @media (min-width: 992px) {
   /* for large screens and up */
   .card img {
-    height: 300px;
-    /* set a slightly larger fixed height for large screens */
+    height: 250px;
   }
 }
 
