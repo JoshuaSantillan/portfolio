@@ -5,7 +5,7 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
-  .row {
+  .resume-row {
     flex-direction: column-reverse;
   }
 }
