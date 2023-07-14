@@ -10,15 +10,15 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 
-Modal.setAppElement('#root') // replace '#root' with the id of the div where your app is mounted in
+Modal.setAppElement('#root');
 
 function Resume() {
   const [showPdf, setShowPdf] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const [pageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(.7);
-  // eslint-disable-next-line
   const [numPages, setNumPages] = useState(null);
+  const [resumeUrl, setResumeUrl] = useState('');
 
   const togglePdf = () => {
     setShowPdf(!showPdf);
@@ -43,7 +43,15 @@ function Resume() {
     }
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // call this function on mount
+    handleResize();
+
+    // Load the PDF using Blob
+    fetch('https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf')
+      .then(response => response.blob())
+      .then(blob => {
+        const resumeBlobUrl = URL.createObjectURL(blob);
+        setResumeUrl(resumeBlobUrl);
+      });
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -61,7 +69,7 @@ function Resume() {
               {showPdf ? "Hide Resume" : "View Resume"}
             </button>
             {showPdf && (
-              <a href="https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf" download="joshuaResume2023.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
+              <a href={resumeUrl} download="joshuaResume2023.pdf" className="btn btn-secondary">
                 Download Resume
               </a>
             )}
@@ -69,7 +77,7 @@ function Resume() {
 
           {showPdf && (
             <div className="resume-container" onClick={handleOpenModal}>
-              <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+              <Document file={resumeUrl} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />
               </Document>
             </div>
@@ -88,7 +96,7 @@ function Resume() {
         overlayClassName="Overlay"
       >
         <div className="resume-container">
-          <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+          <Document file={resumeUrl} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} scale={1} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
         </div>
