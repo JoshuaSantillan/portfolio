@@ -105,15 +105,15 @@ export const projects = [
   },
   {
     name: "Network Simulator",
+    summary: 'ERSP 2020 - Presentation',
     tags: ['Research'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_IMAGE_0,
     images: [],
     imageDescriptions: ['This is an image of Network Simulator project'],
     videos: [process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_VIDEO_0],
     videoDescriptions: ['This is a video of Network Simulator project'],
-    pdfs: [],
-    pdfDescriptions: [],
-    summary: 'Summary for network stuff',
+    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_PDF_0, process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_PDF_1, process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_PDF_2],
+    pdfDescriptions: ["Motivation", "Proposal", "Final Poster"],
     videoControls: true,
   },
 ];
@@ -141,10 +141,10 @@ const VideoComponent = ({ src, controls }) => (
   </div>
 );
 
-const PDFLink = ({ src }) => (
+const PDFLink = ({ src, description }) => (
   <div className="project-pdf">
     <a href={src} target="_blank" rel="noopener noreferrer">
-      View Write-up
+      {description}
     </a>
   </div>
 );
@@ -171,8 +171,10 @@ const ProjectDetails = ({ project }) => {
 
 
         {project.pdfs && project.pdfs.length > 0 && project.pdfs.map((pdf, index) => (
-          <PDFLink key={index} src={pdf} />
+          <PDFLink key={index} src={pdf} description={project.pdfDescriptions[index]} />
         ))}
+
+
       </div>
 
     </div>
