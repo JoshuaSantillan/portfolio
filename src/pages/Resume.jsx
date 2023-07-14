@@ -5,12 +5,14 @@ import '../style/common.css';
 import '../style/resume.css';
 import SkillsChart from "../components/SkillsChart/SkillsChart";
 
+(async function(){
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
   import.meta.url,
 ).toString();
+})();
 
-Modal.setAppElement('#root') // replace '#root' with the id of the div where your app is mounted in
+Modal.setAppElement('#root')
 
 function Resume() {
   const [showPdf, setShowPdf] = useState(true);
@@ -52,9 +54,11 @@ function Resume() {
     <div className="container-fluid resume-page">
       <h2 className="resume-title mt-1">Resume</h2>
       <div className="row">
+        
         <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">
           <SkillsChart />
         </div>
+        
         <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
           <div className="d-flex mb-2">
             <button onClick={togglePdf} className="btn btn-primary mr-2">
@@ -76,6 +80,7 @@ function Resume() {
           )}
         </div>
       </div>
+
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
