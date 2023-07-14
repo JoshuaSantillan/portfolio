@@ -61,7 +61,7 @@ function Resume() {
               {showPdf ? "Hide Resume" : "View Resume"}
             </button>
             {showPdf && (
-              <a href="https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf" download="joshuaResume2023.pdf" className="btn btn-secondary">
+              <a href="https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf" download="joshuaResume2023.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
                 Download Resume
               </a>
             )}
