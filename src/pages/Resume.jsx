@@ -46,18 +46,19 @@ function Resume() {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
   }, []);
 
-  const resumeUrl = 'https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf';
-
   return (
     <div className="container-fluid resume-page">
       <h2 className="resume-title mt-1">Resume</h2>
       <div className="row">
         
+        {/* SkillChart Component Column */}
         <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">
           <SkillsChart />
         </div>
         
+        {/*Resume Column */}
         <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
+          {/*Hide and Download buttons */}
           <div className="d-flex mb-2">
             <button onClick={togglePdf} className="btn btn-primary mr-2">
               {showPdf ? "Hide Resume" : "View Resume"}
@@ -69,6 +70,7 @@ function Resume() {
             )}
           </div>
 
+          {/*Toggle & Render PDF */}
           {showPdf && (
             <div className="resume-container" onClick={handleOpenModal}>
               <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
@@ -79,6 +81,7 @@ function Resume() {
         </div>
       </div>
 
+      {/*Pop out PDF on click */}
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
@@ -91,11 +94,12 @@ function Resume() {
         overlayClassName="Overlay"
       >
         <div className="resume-container">
-          <Document file={resumeUrl} onLoadSuccess={onDocumentLoadSuccess}>
+          <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} scale={1} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
         </div>
       </Modal>
+
     </div>
   );
 }

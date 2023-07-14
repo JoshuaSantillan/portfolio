@@ -28,8 +28,8 @@ const SkillsChart = () => {
   };
 
   const [activeGroup, setActiveGroup] = useState('Programming Languages');
+  const currentSkills = skillGroups[activeGroup] || [];
 
-  // const currentSkills = skillGroups[activeGroup] || [];
   return (
     <div className="skills-container">
       <h3 className="skills-title">Skills</h3>
@@ -43,22 +43,21 @@ const SkillsChart = () => {
             {group}
           </button>
         ))}
-
       </div>
-      {/*
-      <div >
-      <ul className="skills-list">
-        {currentSkills.map((skill, index) => (
-          <li key={index} className="skill-item">
-            <span className="skill-name">{skill.name}</span>
-            <div className="skill-bar">
-              <div className="skill-level" style={{ width: `${skill.level}%` }}></div>
-            </div>
-          </li>
-        ))}
-      </ul>
-      </div>
-        */}
+      {currentSkills.length > 0 ? (
+        <ul className="skills-list">
+          {currentSkills.map((skill, index) => (
+            <li key={index} className="skill-item">
+              <span className="skill-name">{skill.name}</span>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: `${skill.level}%` }}></div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div>No skills found for the selected group.</div>
+      )}
     </div>
   );
 };
