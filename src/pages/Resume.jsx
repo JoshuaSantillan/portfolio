@@ -5,11 +5,6 @@ import '../style/common.css';
 import '../style/resume.css';
 import SkillsChart from "../components/SkillsChart/SkillsChart";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
-).toString();
-
 Modal.setAppElement('#root');
 
 function Resume() {
@@ -45,13 +40,12 @@ function Resume() {
     window.addEventListener("resize", handleResize);
     handleResize();
 
-    // Load the PDF using Blob
-    fetch('https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf')
-      .then(response => response.blob())
-      .then(blob => {
-        const resumeBlobUrl = URL.createObjectURL(blob);
-        setResumeUrl(resumeBlobUrl);
-      });
+    // Set the resume URL here
+    const resumeUrl = 'https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf';
+    setResumeUrl(resumeUrl);
+
+    // Dynamically load pdf.worker.js
+    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
