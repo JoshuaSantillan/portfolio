@@ -1,26 +1,50 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import '../style/Navbar.css'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import '../style/Navbar.css';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
-const Navbar = () => {
-  return (
-    <nav className="nav-page">
-      <ul>
-        <li>
-          <NavLink to="/about" activeclassname="active">About</NavLink>
-        </li>
-        <li>
-          <NavLink to="/resume" activeclassname="active">Resume</NavLink>
-        </li>
-        <li>
-          <NavLink to="/projectsgallery" activeclassname="active">Projects</NavLink>
-        </li>
-        <li>
-          <NavLink to="/backlog" activeclassname="active">Backlog</NavLink>
-        </li>
-      </ul>
-    </nav>
-  );
+const Navbar = ({ menuOpen, toggleMenu }) => {
+    return (
+        <div>
+            <button className="burger" onClick={toggleMenu}>
+                {menuOpen ? <FaTimes className='close-button' /> : <FaBars />}
+            </button>
+            <nav className={menuOpen ? 'nav-page open' : 'nav-page'}>
+                <ul>
+                    <li>
+                        <NavLink to="/about" activeClassName="active">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/resume" activeClassName="active">Resume</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/projectsgallery" activeClassName="active">Projects</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/backlog" activeClassName="active">Backlog</NavLink>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav className="nav-desktop">
+                <ul>
+                    <li>
+                        <NavLink to="/about" activeClassName="active">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/resume" activeClassName="active">Resume</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/projectsgallery" activeClassName="active">Projects</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/backlog" activeClassName="active">Backlog</NavLink>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    );
+
 };
 
 export default Navbar;
