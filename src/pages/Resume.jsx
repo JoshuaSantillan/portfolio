@@ -12,6 +12,7 @@ function Resume() {
   const [showModal, setShowModal] = useState(false);
   const [pageNumber] = useState(1);
   const [scale, setScale] = useState(.7);
+  // eslint-disable-next-line
   const [numPages, setNumPages] = useState(null);
 
   const togglePdf = () => {
@@ -50,12 +51,12 @@ function Resume() {
     <div className="container-fluid resume-page">
       <h2 className="resume-title mt-1">Resume</h2>
       <div className="row">
-        
+
         {/* SkillChart Component Column */}
         <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">
           <SkillsChart />
         </div>
-        
+
         {/*Resume Column */}
         <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
           {/*Hide and Download buttons */}

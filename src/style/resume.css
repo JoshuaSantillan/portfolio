@@ -4,8 +4,13 @@
   padding-bottom: 20px;
   transition: box-shadow 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
 
-  
+
 .resume-container .react-pdf__Page {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
@@ -28,13 +33,15 @@
 }
 
 /* Existing styles */
-.resume-title{
-  color: white;
+.resume-title {
+  color: #fff;
 }
-.resume-page{
+
+.resume-page {
   font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
-.btn-primary{
+
+.btn-primary {
   --bs-btn-bg: #0C7075 !important;
   --bs-btn-border-color: #072e33 !important;
   --bs-btn-hover-color: #fff;
@@ -50,22 +57,28 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 10vh; /* adjust as needed to change vertical position */
+  padding-top: 10vh;
+  /* adjust as needed to change vertical position */
 }
-.resume-container:hover{
+
+.resume-container:hover {
   cursor: pointer;
 }
+
 .Modal {
   position: relative;
   background-color: #0C7075;
-  max-width: 60%; /* set the max-width of the modal */
+  max-width: 60%;
+  /* set the max-width of the modal */
   padding: 5px;
   outline: none;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* shadow around the modal */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  /* shadow around the modal */
   border-radius: 10px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   transform: scale(0.95);
