@@ -14,7 +14,7 @@ export const projects = [
     videos: [],
     videoDescriptions: [],
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL3_PDF_0],
-    pdfDescriptions: ['This is a PDF of Fragment Shader'],
+    pdfDescriptions: ['Project Description'],
     summary: 'Fragment Shader',
   },
   {
@@ -22,14 +22,15 @@ export const projects = [
     tags: ['OpenGL'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_1,
     images: [
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_0,
       process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_1,
-      process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_0
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_2
     ],
-    imageDescriptions: ['Test Caption One', 'Test Caption Two'],
-    videos: [],
+    imageDescriptions: [],
+    videos: [process.env.REACT_APP_PORTFOLIO_PROJECTGL3_VIDEO_0, process.env.REACT_APP_PORTFOLIO_PROJECTGL3_VIDEO_1, process.env.REACT_APP_PORTFOLIO_PROJECTGL3_VIDEO_2],
     videoDescriptions: [],
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL3_PDF_0],
-    pdfDescriptions: ['This is a PDF of Fragment Shader'],
+    pdfDescriptions: ['Project Description'],
     summary: 'Fragment Shader',
   },
   {
@@ -37,7 +38,7 @@ export const projects = [
     tags: ['Houdini'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI1_IMAGE_0,
     images: [],
-    imageDescriptions: ['This is an image of Particle System project'],
+    imageDescriptions: [],
     videos: [process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI1_VIDEO_0],
     videoDescriptions: ['This is a video of Particle System project'],
     pdfs: [],
@@ -49,7 +50,7 @@ export const projects = [
     tags: ['Houdini'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_IMAGE_0,
     images: [],
-    imageDescriptions: ['This is an image of Cloth Simulation project'],
+    imageDescriptions: [],
     videos: [
       process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_0,
       process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_1
@@ -57,16 +58,16 @@ export const projects = [
     videoDescriptions: ['This is video 1 of Cloth Simulation project', 'This is video 2 of Cloth Simulation project'],
     pdfs: [],
     pdfDescriptions: [],
-    summary: 'Summary for Cloth simulator',
+    summary: 'Something about Spring Dampers and Aerodynamic Drag here',
   },
   {
     name: "Subdivision",
     tags: ['OpenGL'],
-    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_0,
+    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1,
     images: [
-      process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_0
     ],
-    imageDescriptions: ['This is an image of Subdivision project', 'This is another image of Subdivision project'],
+    imageDescriptions: ['This is an image of Subdivision project'],
     videos: [
       process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_0,
       process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_1,
@@ -78,30 +79,46 @@ export const projects = [
       'This is video 3 of Subdivision project'
     ],
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL4_PDF_0],
-    pdfDescriptions: ['This is a PDF of Subdivision'],
-    summary: 'Fragment Shader',
+    pdfDescriptions: ['Project Write Up'],
+    summary: 'Bezier Curves, Bspline Curves, and recursive sub-division curves',
     videoControls: true,
   },
   {
-    name: "Lighting & Shadow Mapping",
+    name: "Local Illumination",
     tags: ['OpenGL'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_0,
     images: [
-      process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_1,
-      process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_2,
       process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_3,
       process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_4,
-      process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_5
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_1,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_2,
     ],
     imageDescriptions: [
-      'Test Caption One', 'Test Caption Two', 'Test Caption Three',
-      'Test Caption Four', 'Test Caption Five', 'Test Caption Six'
-    ],
+      'Phong Model', 'View and Light Vectors'],
     videos: [],
     videoDescriptions: [],
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL1_PDF_0],
-    pdfDescriptions: ['This is a PDF of Lighting & Shadow Mapping'],
-    summary: 'Scene Mapping Lighting & Shadows',
+    pdfDescriptions: ['Project Description'],
+    summary: 'Local Illumination with Phong Shading using multiple lights',
+  },
+  {
+    name: "Shadow Mapping",
+    tags: ['OpenGL'],
+    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_0,
+    images: [
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_1,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_2,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_3,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_4,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_5,
+    ],
+    imageDescriptions: [
+      'Test Caption One', 'Test Caption Two'],
+    videos: [],
+    videoDescriptions: [],
+    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF0, process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF1],
+    pdfDescriptions: ['Final Write Up', 'Project Description'],
+    summary: 'Extending Local illumination to have shadows',
   },
   {
     name: "Network Simulator",
