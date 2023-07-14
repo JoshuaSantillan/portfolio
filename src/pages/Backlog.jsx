@@ -8,7 +8,7 @@ function Backlog() {
       <h3 className="todo-title"><br />To Do:</h3>
       <div className="shiftCenter">
       <ul className="todo-list">
-        <li>Fix PDF Viewing & Resume Page</li>
+        <li className="text-red">Fix PDF Viewing & Resume Page</li>
         <li>Fix Skill chart display onclick</li>
         <li>Hamburger Menu for small screen</li>
         <li>Background implemented by Three.js or WEBGL</li>
