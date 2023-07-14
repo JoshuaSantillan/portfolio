@@ -8,7 +8,7 @@ import SkillsChart from "../components/SkillsChart/SkillsChart";
 Modal.setAppElement('#root');
 
 function Resume() {
-  const [showPdf, setShowPdf] = useState(true);
+  const [showPdf, setShowPdf] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [pageNumber] = useState(1);
   const [scale, setScale] = useState(.7);
@@ -60,7 +60,7 @@ function Resume() {
         {/*Resume Column */}
         <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
           {/*Hide and Download buttons */}
-          <div className="d-flex mb-2">
+          <div className="d-flex mb-2 justify-content-center">
             <button onClick={togglePdf} className="btn btn-primary mr-2">
               {showPdf ? "Hide Resume" : "View Resume"}
             </button>
@@ -73,7 +73,7 @@ function Resume() {
 
           {/*Toggle & Render PDF */}
           {showPdf && (
-            <div className="resume-container" onClick={handleOpenModal}>
+            <div className="resume-container justify-content-center" onClick={handleOpenModal}>
               <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />
               </Document>

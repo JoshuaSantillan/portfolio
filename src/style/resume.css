@@ -62,8 +62,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 10vh;
-  /* adjust as needed to change vertical position */
+  /* adjust as needed to change vertical position of Modal */
+  padding-top: 5vh;
 }
 
 .resume-container:hover {
@@ -73,22 +73,21 @@
 .Modal {
   position: relative;
   background-color: #0C7075;
-  max-width: 60%;
+  max-width: 100%;
   /* set the max-width of the modal */
-  padding: 5px;
+  padding: 4px;
   outline: none;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   /* shadow around the modal */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  transform: scale(0.95);
+  transform: scale(.95);
   opacity: 0;
 }
 
 .Modal--after-open {
   transform: scale(1);
   opacity: 1;
-
 }
 
 .Modal--before-close {
