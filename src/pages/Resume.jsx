@@ -5,21 +5,13 @@ import '../style/common.css';
 import '../style/resume.css';
 import SkillsChart from "../components/SkillsChart/SkillsChart";
 
-(async function(){
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
-).toString();
-})();
-
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
 
 function Resume() {
   const [showPdf, setShowPdf] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [pageNumber] = useState(1);
   const [scale, setScale] = useState(.7);
-  // eslint-disable-next-line
   const [numPages, setNumPages] = useState(null);
 
   const togglePdf = () => {
@@ -49,6 +41,12 @@ function Resume() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+  }, []);
+
+  const resumeUrl = 'https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf';
 
   return (
     <div className="container-fluid resume-page">
@@ -93,7 +91,7 @@ function Resume() {
         overlayClassName="Overlay"
       >
         <div className="resume-container">
-          <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+          <Document file={resumeUrl} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} scale={1} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
         </div>
