@@ -1,3 +1,33 @@
+.resume-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+  
+.resume-container .react-pdf__Page {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.resume-container .react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .resume-container .react-pdf__Page canvas {
+    max-width: 100%;
+  }
+}
+
+.resume-container .react-pdf__message {
+  padding: 20px;
+  color: white;
+}
+
+/* Existing styles */
 .resume-title{
   color: white;
 }
@@ -5,12 +35,50 @@
   font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
 .btn-primary{
-    --bs-btn-bg: #0C7075 !important;
-    --bs-btn-border-color: #072e33 !important;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #393e46 !important;
-    --bs-btn-hover-border-color: #393e46 !important;
-    --bs-btn-active-bg: #072e33 !important;
-    --bs-btn-active-border-color: #393e46 !important;
+  --bs-btn-bg: #0C7075 !important;
+  --bs-btn-border-color: #072e33 !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #393e46 !important;
+  --bs-btn-hover-border-color: #393e46 !important;
+  --bs-btn-active-bg: #072e33 !important;
+  --bs-btn-active-border-color: #393e46 !important;
 }
 
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10vh; /* adjust as needed to change vertical position */
+}
+.resume-container:hover{
+  cursor: pointer;
+}
+.Modal {
+  position: relative;
+  background-color: #0C7075;
+  max-width: 60%; /* set the max-width of the modal */
+  padding: 5px;
+  outline: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* shadow around the modal */
+  border-radius: 10px;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.Modal--after-open {
+  transform: scale(1);
+  opacity: 1;
+
+}
+
+.Modal--before-close {
+  transform: scale(0.95);
+  opacity: 0;
+}

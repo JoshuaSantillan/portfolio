@@ -1,19 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SkillsChart.css';
 
 const SkillsChart = () => {
-  const skills = [
-    { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 85 },
-    { name: 'Python', level: 80 },
-    { name: 'CSS', level: 75 },
-  ];
+  const skillGroups = {
+    'Programming Languages': [
+      { name: 'Python', level: 85 },
+      { name: 'C++', level: 90 },
+      { name: 'Assembly (x86/ARM)', level: 80 },
+    ],
+    'Frameworks': [
+      { name: 'React', level: 80 },
+    ],
+    'Tools': [
+      { name: 'GIT', level: 75 },
+      { name: 'Linux/PowerShell', level: 75 },
+      { name: 'Arduino', level: 85 },
+    ],
+    'Skills': [
+      { name: 'Algorithmic Analysis', level: 90 },
+      { name: 'Bash Scripting', level: 75 },
+      { name: 'Data Structures', level: 85 },
+      { name: 'Debugging', level: 80 },
+      { name: 'Interpersonal Skills', level: 80 },
+      // more skills here...
+    ],
+    // other groups here...
+  };
 
+  const [activeGroup, setActiveGroup] = useState('Programming Languages');
+
+  // const currentSkills = skillGroups[activeGroup] || [];
   return (
     <div className="skills-container">
       <h3 className="skills-title">Skills</h3>
+      <div className="skill-groups">
+        {Object.keys(skillGroups).map(group => (
+          <button
+            key={group}
+            className={`btn btn-primary skill-group ${group === activeGroup ? 'active' : ''}`}
+            onClick={() => setActiveGroup(group)}
+          >
+            {group}
+          </button>
+        ))}
+
+      </div>
+      {/*
+      <div >
       <ul className="skills-list">
-        {skills.map((skill, index) => (
+        {currentSkills.map((skill, index) => (
           <li key={index} className="skill-item">
             <span className="skill-name">{skill.name}</span>
             <div className="skill-bar">
@@ -22,6 +57,8 @@ const SkillsChart = () => {
           </li>
         ))}
       </ul>
+      </div>
+        */}
     </div>
   );
 };

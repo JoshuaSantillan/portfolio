@@ -1,58 +1,98 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Document, Page, pdfjs } from 'react-pdf';
+import Modal from 'react-modal';
 import '../style/common.css';
 import '../style/resume.css';
 import SkillsChart from "../components/SkillsChart/SkillsChart";
 
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.js',
+  import.meta.url,
+).toString();
+
+Modal.setAppElement('#root') // replace '#root' with the id of the div where your app is mounted in
+
 function Resume() {
   const [showPdf, setShowPdf] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+  const [pageNumber] = useState(1);
+  const [scale, setScale] = useState(.7);
+  // eslint-disable-next-line
+  const [numPages, setNumPages] = useState(null);
 
   const togglePdf = () => {
     setShowPdf(!showPdf);
   };
 
+  const handleOpenModal = () => {
+    setShowModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  }
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      let currentScale = window.innerWidth < 768 ? .7 : .99;
+      setScale(currentScale);
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // call this function on mount
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="container-fluid mt-5 resume-page">
-      <h2 className="resume-title">Resume</h2>
+    <div className="container-fluid resume-page">
+      <h2 className="resume-title mt-1">Resume</h2>
       <div className="row">
-
-        {/* Skills Chart */}
-        <div className="col-md-4"> {/* Adjust the column size as needed */}
+        <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">
           <SkillsChart />
-
-          {/* Recommendations */}
-          {/* TODO: Add recommendations section here */}
-
-          {/* Certifications and Awards */}
-          {/* TODO: Add certifications and awards section here */}
         </div>
-
-        {/* Resume PDF */}
-        <div className="col-md-8"> {/* Adjust the column size as needed */}
-          <button onClick={togglePdf} className="btn btn-primary mb-2">
-            {showPdf ? "Hide Resume" : "View Resume"}
-          </button>
+        <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
+          <div className="d-flex mb-2">
+            <button onClick={togglePdf} className="btn btn-primary mr-2">
+              {showPdf ? "Hide Resume" : "View Resume"}
+            </button>
+            {showPdf && (
+              <a href="https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf" download="joshuaResume2023.pdf" className="btn btn-secondary">
+                Download Resume
+              </a>
+            )}
+          </div>
 
           {showPdf && (
-            <div className="iframe-container"> {/* Apply styles to a container around the iframe */}
-              <iframe
-                src={process.env.REACT_APP_RESUME_PDF}
-                width="100%"
-                height="600px"
-                title="resume frame"
-              >
-                <p>Failed to load PDF file.</p>
-              </iframe>
+            <div className="resume-container" onClick={handleOpenModal}>
+              <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+                <Page pageNumber={pageNumber} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />
+              </Document>
             </div>
           )}
-
-          {/* Button to download PDF resume */}
-          <div className="mt-2">
-            <a href="/joshuaResume2023.pdf" download="https://res.cloudinary.com/dbn76qfin/image/upload/v1688543815/Projects/joshSantillan_juneresume23_opxm20.pdf" className="btn btn-secondary">
-              Download Resume
-            </a>
-          </div>
         </div>
       </div>
+      <Modal
+        isOpen={showModal}
+        onRequestClose={handleCloseModal}
+        contentLabel="Resume Modal"
+        className={{
+          base: 'Modal',
+          afterOpen: 'Modal--after-open',
+          beforeClose: 'Modal--before-close'
+        }}
+        overlayClassName="Overlay"
+      >
+        <div className="resume-container">
+          <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+            <Page pageNumber={pageNumber} scale={1} renderTextLayer={false} renderAnnotationLayer={false} />
+          </Document>
+        </div>
+      </Modal>
     </div>
   );
 }
