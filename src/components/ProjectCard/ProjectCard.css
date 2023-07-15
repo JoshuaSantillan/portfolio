@@ -1,3 +1,6 @@
+
+/* project list */
+
 .project-page {
   font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
@@ -20,6 +23,9 @@
   transition: opacity 300ms ease-in;
 }
 
+
+/* Filter Search Button */
+
 .filter-button {
   background-color: #0C7075;
   color: #f2f2f2;
@@ -34,21 +40,30 @@
   background-color: #393e46;
 }
 
+
+/* Card Styles */
+
 .card {
   padding-top: 15px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   cursor: pointer;
   width: 18rem;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(0, 0, 0, .2) !important;
   backdrop-filter: blur(10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+/* background outline Animation*/
+.card:hover{
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) .1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+  border-width: 2px;
+	animation: borderRotate
+   var(--d) linear infinite forwards;
 }
 .card img {
   max-width: 100%;
   height: auto;
   margin-bottom: 5px;
   /* card title */
-
 }
 
 .card-inner {
@@ -97,6 +112,8 @@
   transition: opacity 300ms ease-in;
 }
 
+
+/*
 .card:before, .card:after {
 	content: '';
 	position: absolute;
@@ -125,3 +142,4 @@
 .card:after {
 	filter: blur(50px);
 }
+*/

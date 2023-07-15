@@ -14,10 +14,18 @@ function Resume() {
   const [scale, setScale] = useState(.7);
   // eslint-disable-next-line
   const [numPages, setNumPages] = useState(null);
+  const [buttonClass, setButtonClass] = useState('btn btn-primary mr-2 resume-btn');
 
   const togglePdf = () => {
+    if (!showPdf) {
+      setButtonClass('btn btn-primary mr-2 resume-btn clicked');
+    } else {
+      setButtonClass('btn btn-primary mr-2 resume-btn');
+    }
     setShowPdf(!showPdf);
   };
+
+
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -52,18 +60,16 @@ function Resume() {
       <h2 className="resume-title mt-1">Resume</h2>
       <div className="row resume-row">
 
-        {/* SkillChart Component Column */}
         <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">
           <SkillsChart />
         </div>
 
-        {/*Resume Column */}
         <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
-          {/*Hide and Download buttons */}
           <div className="d-flex mb-2 justify-content-center">
-            <button onClick={togglePdf} className="btn btn-primary mr-2">
+            <button style={{ backgroundColor: showPdf ? '#05161A' : '#0C7075', borderColor: showPdf ? '#05161A' : '#0C7075' }} onClick={togglePdf} className={buttonClass}>
               {showPdf ? "Hide Resume" : "View Resume"}
             </button>
+
             {showPdf && (
               <a href={process.env.REACT_APP_RESUME_PDF} download="joshuaResume2023.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
                 Download Resume
@@ -71,7 +77,6 @@ function Resume() {
             )}
           </div>
 
-          {/*Toggle & Render PDF */}
           {showPdf && (
             <div className="resume-container justify-content-center" onClick={handleOpenModal}>
               <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
@@ -82,7 +87,6 @@ function Resume() {
         </div>
       </div>
 
-      {/*Pop out PDF on click */}
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}

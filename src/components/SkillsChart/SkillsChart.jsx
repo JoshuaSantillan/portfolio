@@ -49,7 +49,11 @@ const SkillsChart = () => {
         {Object.keys(skillGroups).map(group => (
           <button
             key={group}
-            className={`btn btn-primary skill-group ${group === activeGroup ? 'active' : ''}`}
+            style={{
+              backgroundColor: group === activeGroup ? '#05161A' : '#0C7075',
+              borderColor: group === activeGroup ? '#05161A' : '#072E33',
+            }}
+            className={` text-white btn skill-btn skill-group ${group === activeGroup ? 'active' : ''}`}
             onClick={() => setActiveGroup(group)}
           >
             {group}

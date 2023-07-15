@@ -1,6 +1,5 @@
 import React from 'react';
 import './SocialMediaNav.css';
-
 const SocialMediaNav = () => {
   const openLink = (url) => {
     window.open(url, '_blank');

@@ -3,9 +3,10 @@
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
-  background-color: #1a1a1a;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  padding-bottom: 100px;
+  background: rgba(0, 0, 0, .5) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  padding-bottom: 60px;
 }
 
 .skills-title {
@@ -48,21 +49,15 @@
 }
 
 .skill-group {
-  background-color: #333;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+
 }
 
 .skill-group:hover {
-  background-color: #0C7075;
-  border: none;
-}
-
-.skill-group.active {
-  background-color: #0C7075;
-  border: none;
+  background-color: #393e46 !important;
 }

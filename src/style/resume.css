@@ -1,3 +1,14 @@
+/* Page Font and Title Color */
+.resume-title {
+  color: #fff;
+}
+
+.resume-page {
+  font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
+  padding-bottom: 20px;
+}
+
+/* Right Side Container for Resume */
 .resume-container {
   display: flex;
   align-items: center;
@@ -11,7 +22,6 @@
   }
 }
 
-
 .resume-container .react-pdf__Page {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
@@ -21,7 +31,6 @@
   height: auto !important;
 }
 
-/* Add a media query for smaller screens */
 @media (max-width: 768px) {
   .resume-container .react-pdf__Page canvas {
     max-width: 100%;
@@ -33,25 +42,12 @@
   color: white;
 }
 
-/* Existing styles */
-.resume-title {
-  color: #fff;
+.resume-btn:hover {
+  background-color: #393e46 !important;
+  border-color: #393e46 !important;
 }
 
-.resume-page {
-  font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
-}
-
-.btn-primary {
-  --bs-btn-bg: #0C7075 !important;
-  --bs-btn-border-color: #072E33 !important;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6DA5C0 !important;
-  --bs-btn-hover-border-color: #6DA5C0 !important;
-  --bs-btn-active-bg: #05161A !important;
-  --bs-btn-active-border-color: #05161A !important;
-}
-
+/* Resume Modal Pop out */
 .Overlay {
   position: fixed;
   top: 0;
@@ -59,11 +55,9 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  /* semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* adjust as needed to change vertical position of Modal */
   padding-top: 5vh;
 }
 
@@ -75,10 +69,8 @@
   position: relative;
   background-color: #0C7075;
   max-width: 100%;
-  /* set the max-width of the modal */
   padding: 4px;
   outline: none;
-  /* shadow around the modal */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
