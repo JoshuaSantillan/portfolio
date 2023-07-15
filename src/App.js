@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import ProjectsGallery from "./pages/ProjectsGallery";
 import Backlog from "./pages/Backlog";
+import TestParticles from "./pages/TestParticles"
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/projectsgallery" element={<ProjectsGallery />} />
           <Route path="/backlog" element={<Backlog />} />
+          <Route path="/testparticles" element={<TestParticles />} />
         </Routes>
       </main>
       <div className="overlay"></div>
