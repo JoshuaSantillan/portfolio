@@ -44,12 +44,12 @@
 
 .btn-primary {
   --bs-btn-bg: #0C7075 !important;
-  --bs-btn-border-color: #072e33 !important;
+  --bs-btn-border-color: #072E33 !important;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #393e46 !important;
-  --bs-btn-hover-border-color: #393e46 !important;
-  --bs-btn-active-bg: #072e33 !important;
-  --bs-btn-active-border-color: #393e46 !important;
+  --bs-btn-hover-bg: #6DA5C0 !important;
+  --bs-btn-hover-border-color: #6DA5C0 !important;
+  --bs-btn-active-bg: #05161A !important;
+  --bs-btn-active-border-color: #05161A !important;
 }
 
 .Overlay {

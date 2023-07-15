@@ -21,7 +21,7 @@
 }
 
 .filter-button {
-  background-color: #294d61;
+  background-color: #0C7075;
   color: #f2f2f2;
   border: none;
   padding: 10px 20px;
@@ -39,13 +39,16 @@
   margin-top: 1rem;
   cursor: pointer;
   width: 18rem;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 .card img {
   max-width: 100%;
   height: auto;
   margin-bottom: 5px;
   /* card title */
+
 }
 
 .card-inner {
@@ -92,4 +95,33 @@
 .detailed-view-exit-active {
   opacity: 0;
   transition: opacity 300ms ease-in;
+}
+
+.card:before, .card:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 40s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.card:after {
+	filter: blur(50px);
 }

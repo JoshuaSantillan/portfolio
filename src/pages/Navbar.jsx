@@ -9,7 +9,7 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
             <button className="burger" onClick={toggleMenu}>
                 {menuOpen ? <FaTimes className='close-button' /> : <FaBars />}
             </button>
-            <nav className={menuOpen ? 'nav-page open' : 'nav-page'}>
+            <nav  onClick={toggleMenu} className={menuOpen ? 'nav-page open' : 'nav-page'}>
                 <ul>
                     <li>
                         <NavLink to="/about" activeclassname="active">About</NavLink>
