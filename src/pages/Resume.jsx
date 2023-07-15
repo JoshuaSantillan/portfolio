@@ -66,7 +66,7 @@ function Resume() {
 
         <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
           <div className="d-flex mb-2 justify-content-center">
-            <button style={{ backgroundColor: showPdf ? '#05161A' : '#0C7075', borderColor: showPdf ? '#05161A' : '#0C7075' }} onClick={togglePdf} className={buttonClass}>
+            <button style={{ backgroundColor: showPdf ? '#393e46' : '#0C7075', borderColor: showPdf ? '#05161A' : '#0C7075' }} onClick={togglePdf} className={buttonClass}>
               {showPdf ? "Hide Resume" : "View Resume"}
             </button>
 

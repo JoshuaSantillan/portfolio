@@ -50,8 +50,8 @@ const SkillsChart = () => {
           <button
             key={group}
             style={{
-              backgroundColor: group === activeGroup ? '#05161A' : '#0C7075',
-              borderColor: group === activeGroup ? '#05161A' : '#072E33',
+              backgroundColor: group === activeGroup ? '#393e46' : '#0C7075',
+              borderColor: group === activeGroup ? '#393e46' : '#072E33',
             }}
             className={` text-white btn skill-btn skill-group ${group === activeGroup ? 'active' : ''}`}
             onClick={() => setActiveGroup(group)}
