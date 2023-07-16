@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectDetails, { projects } from '../components/ProjectDetails/ProjectDetails';
@@ -6,6 +6,10 @@ import ProjectCard from '../components/ProjectCard/ProjectCard'
 import ColorGame from '../components/ColorGame/ColorGame';
 
 const DetailedView = ({ project }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [project]);
+
   if (project.id === 'colorGame') {
     return (
       <div className="detailed-view">
