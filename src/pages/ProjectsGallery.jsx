@@ -43,7 +43,7 @@ const ProjectsGallery = () => {
       >
         <div>
           {/* Render tag buttons */}
-          <div>
+          <div className='filter-button-container'>
             {['All', 'OpenGL', 'Houdini', 'Research', 'Javascript'].map((tag) => (
               <button
                 key={tag}

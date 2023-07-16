@@ -30,12 +30,15 @@
   background-color: #0C7075;
   color: #f2f2f2;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 6px 5px;
+  margin: 3px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  display: flex-row;
 }
-
+.filter-button-container{
+  max-width: 70%;
+}
 .filter-button:hover {
   background-color: #393e46;
 }
