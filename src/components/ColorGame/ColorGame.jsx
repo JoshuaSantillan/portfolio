@@ -6,7 +6,7 @@ function ColorGame() {
   const [colors, setColors] = useState([]);
   const [pickedColor, setPickedColor] = useState('');
   const [message, setMessage] = useState('');
-
+  const [titleColor, setTitleColor] = useState('#356b74');
   const generateRandomColor = useCallback(() => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -29,6 +29,7 @@ function ColorGame() {
     setColors(newColors);
     setPickedColor(newPickedColor);
     setMessage('');
+     setTitleColor('#356b74');
   }, [generateRandomColors, numSquares]);
 
 
@@ -41,6 +42,7 @@ function ColorGame() {
     if (color === pickedColor) {
       setMessage("Nice job!");
       setColors(Array(numSquares).fill(color));
+      setTitleColor(color);
     } else {
       setMessage("Sorry, Guess Again");
       setColors(colors.map(c => c === color ? '#072e33' : c));
@@ -55,14 +57,14 @@ function ColorGame() {
   };
   return (
     <>
-      <div className="color-title text-white">
+      <div className="color-title text-white" style={{ backgroundColor: titleColor }}>
         <h1 className="text-center">
           Pick The Correct <br />
           <span id="colorDisplay" className="text-nowrap text-flud">{pickedColor}</span>
           <br />
           Color Game
         </h1>
-        <Row id="stripe" className="justify-content-center flex-column flex-sm-row">
+        <Row id="stripe" className="justify-content-center flex-column flex-sm-row" >
           <Col xs="12" sm="auto" className="text-center">
             <Button onClick={reset} className="cg-button btn-sm" variant="info">New Colors</Button>
             <Button className="mode cg-button btn-sm" onClick={() => handleDifficultyChange('Easy')} variant="info">Easy</Button>
