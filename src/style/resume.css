@@ -22,27 +22,6 @@
   }
 }
 
-.resume-container .resume-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 120px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  .resume-container .resume-btn {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 576px) {
-  .resume-container .resume-btn {
-    font-size: 12px;
-  }
-}
-
 .resume-container .react-pdf__Page {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
