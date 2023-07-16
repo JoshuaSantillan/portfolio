@@ -8,8 +8,8 @@
 @media (min-width: 768px) { /* for medium screens and up */
   .project-media img,
   .project-media video {
-    height: 200px; 
-    object-fit: fill; /* cover so the image covers the whole area */
+    height: 50%;
+    width: 50%; 
   }
 }
 
