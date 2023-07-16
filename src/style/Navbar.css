@@ -33,14 +33,13 @@
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
   position: fixed;
-  top: 85px;
+  top: 75px;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 45%;
   background-color: rgba(5, 22, 26, 0.7);
   z-index: 100;
-  padding-top: 6px;
   padding-right: 50px;
   padding-bottom: 20px;
   overflow-y: none;
@@ -79,15 +78,15 @@
 nav ul {
   list-style: none;
   margin: 0;
+  font-size: 16px;
+
   padding: 0;
   justify-content: space-around;
-  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li {
   flex: 1;
   text-align: center;
-  font-size: 18px;
   transition: background-color 0.2s ease-in-out;
 }
 
