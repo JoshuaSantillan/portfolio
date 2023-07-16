@@ -55,7 +55,22 @@
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-align: center; 
+}
 
+/* Add media queries */
+@media (max-width: 600px) {
+  .skill-group {
+    font-size: 14px; 
+    padding: 5px 10px; 
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-group {
+    font-size: 12px; 
+    padding: 5px; 
+  }
 }
 
 .skill-group:hover {
