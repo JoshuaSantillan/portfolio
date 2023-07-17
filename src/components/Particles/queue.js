@@ -38,6 +38,8 @@ function Queue(value) {
   }
 }
 
+
+/*
 // Test for enqueue and dequeue operations
 const myQueue = new Queue();
 console.log('Is Queue Empty?', myQueue.isEmpty()); // Is Queue Empty? true
@@ -51,3 +53,5 @@ console.log('Dequeue:', myQueue.dequeue()); // Dequeue: First
 console.log('Dequeue:', myQueue.dequeue()); // Dequeue: Second
 console.log('Dequeue:', myQueue.dequeue()); // Dequeue: Third
 console.log('Is Queue Empty?', myQueue.isEmpty()); // Is Queue Empty? true
+
+*/

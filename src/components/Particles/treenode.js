@@ -1,5 +1,3 @@
-import './queue.js'
-
 function TreeNode(value) {
   this.value = value;
   this.children = new Array();
@@ -10,32 +8,36 @@ function TreeNode(value) {
 }
 
 // perform Depth-First Search (DFS)
-function dfs(node) {
+function dfs(node, indent = '') {
   if (!node) return;
-
-  console.log(node.value); // Process the current node pre-order
-  for (const child of node.children) {
-    dfs(child); 
-  }
+  console.log(indent + node.value); // Process the current node pre-order
+  node.children.forEach((child, index) => {
+    const isLastChild = index === node.children.length - 1;
+    dfs(child, indent + (isLastChild ? '   ' : '|  '));
+  });
 }
+
+/*function dfs(node) {
+  if (!node) return;
+  node.children.forEach(child => dfs(child));
+}
+*/
 
 // perform Breadth-First Search (BFS)
 function bfs(root) {
   if (!root) return;
 
-  const queue = new Queue(); // Create an instance of the Queue class
-  queue.enqueue(root);
-
+  const queue = new Queue(root);
   while (!queue.isEmpty()) {
-    const node = queue.dequeue();
-    console.log(node.value); // Process the current node
+    const treeNode = queue.dequeue();
+    console.log(treeNode.value);
 
-    for (const child of node.children) {
-      queue.enqueue(child); // Add children to the queue
-    }
+    treeNode.children.forEach(child => queue.enqueue(child));
   }
 }
 
+
+/* 
 // Testing With Random Tree & DFS/BFS
 const rootNode = new TreeNode('A');
 const nodeB = new TreeNode('B');
@@ -50,6 +52,9 @@ nodeB.children.push(nodeD);
 nodeB.children.push(nodeE);
 nodeC.children.push(nodeF);
 
+
+*/ 
+
 /*
       A
      / \
@@ -59,6 +64,9 @@ nodeC.children.push(nodeF);
 
 */
 
+
+/*
+console.log("Testing Tree")
 // Perform Depth-First Search (DFS)
 console.log('DFS:');
 dfs(rootNode); // A -> B -> D -> E -> C -> F
@@ -66,3 +74,4 @@ dfs(rootNode); // A -> B -> D -> E -> C -> F
 // Perform Breadth-First Search (BFS)
 console.log('BFS:');
 bfs(rootNode); // A -> B -> C -> D -> E -> F
+*/
