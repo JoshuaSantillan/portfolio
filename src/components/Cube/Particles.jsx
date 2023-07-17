@@ -28,23 +28,28 @@ const Particles = () => {
     // Initial size update
     updateSize();
 
-    const particleMaterial = new THREE.PointsMaterial({
-      size: .01,
-      sizeAttenuation: true
-    })
+    const vertices = [];
 
-    // Create Cube Geometry, Mesh and add it to the scene
-    const geometry = new THREE.SphereGeometry(1, 32, 32);
-    const particles = new THREE.Points(geometry, particleMaterial)
-//    const material = new THREE.MeshBasicMaterial({ color: '#0C7075' });
-//    const cube = new THREE.Mesh(geometry, material);
-    scene.add(particles);
+    for ( let i = 0; i < 10000; i ++ ) {
+      const x = THREE.MathUtils.randFloatSpread( 2000 );
+      const y = THREE.MathUtils.randFloatSpread( 2000 );
+      const z = THREE.MathUtils.randFloatSpread( 2000 );
+    
+      vertices.push( x, y, z );
+    }
+    
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+    const material = new THREE.PointsMaterial( { color: 0x888888 } );
+    const points = new THREE.Points( geometry, material );
+    scene.add( points );
+    
 
     // Our animation render function
     const animate = function () {
       requestAnimationFrame(animate);
-      particles.rotation.x += 0.01;
-      particles.rotation.y += 0.01;
+      points.rotation.x += 0.01;
+      points.rotation.y += 0.01;
       renderer.render(scene, camera);
     };
     animate();
