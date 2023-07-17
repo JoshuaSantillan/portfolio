@@ -28,8 +28,8 @@ const Particles = () => {
     // Initial size update
     updateSize();
 
+    // Create particle system (not GPU friendly rn)
     const vertices = [];
-
     for ( let i = 0; i < 10000; i ++ ) {
       const x = THREE.MathUtils.randFloatSpread( 2000 );
       const y = THREE.MathUtils.randFloatSpread( 2000 );

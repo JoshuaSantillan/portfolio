@@ -1,5 +1,5 @@
 import React from 'react';
-import Particles from '../components/Cube/Particles'; 
+import Particles from '../components/Particles/Particles'; 
 
 const TestParticles = () => {
   return (
