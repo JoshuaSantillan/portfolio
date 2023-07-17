@@ -40,8 +40,6 @@ function CollatzTreeBuilder() {
     }
   }
   
-  
-
   function findNode(root, predicate) {
     if (!root) return null;
 

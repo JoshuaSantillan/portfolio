@@ -15,19 +15,6 @@ function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-
-function printQueue(queue) {
-  let value = queue.dequeue();
-
-  while (value !== null) {
-    console.log(value);
-
-    value = queue.dequeue();
-  }
-  
-}
-
-
 /* Coloring Functions */
 function Color(hexColor) {
   var self = this;

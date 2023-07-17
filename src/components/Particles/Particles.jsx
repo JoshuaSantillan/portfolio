@@ -30,17 +30,17 @@ const Particles = () => {
 
     // Create particle system (not GPU friendly rn)
     const vertices = [];
-    for ( let i = 0; i < 10000; i ++ ) {
-      const x = THREE.MathUtils.randFloatSpread( 2000 );
-      const y = THREE.MathUtils.randFloatSpread( 2000 );
-      const z = THREE.MathUtils.randFloatSpread( 2000 );
+    for ( let i = 0; i < 30000; i ++ ) {
+      const x = THREE.MathUtils.randFloatSpread( 4000 );
+      const y = THREE.MathUtils.randFloatSpread( 4000 );
+      const z = THREE.MathUtils.randFloatSpread( 4000 );
     
       vertices.push( x, y, z );
     }
     
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
-    const material = new THREE.PointsMaterial( { color: 0x888888 } );
+    const material = new THREE.PointsMaterial( { color: '#ADD8E6' } );
     const points = new THREE.Points( geometry, material );
     scene.add( points );
     
