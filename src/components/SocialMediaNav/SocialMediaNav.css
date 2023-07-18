@@ -44,7 +44,7 @@
   top: calc(100% + 20px);
   color: white;
   visibility: visible;
-  animation: slide-up 0.5s ease-out;
+  animation: 0.5s ease-out;
 }
 
 /* toast pop down */
