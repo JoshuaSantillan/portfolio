@@ -1,7 +1,6 @@
 .color-title {
   width: 100%;  
   text-align: center;
-  background-color: #356b74;
   margin: 0px;
   font-weight: normal;
   text-transform: uppercase;
@@ -68,7 +67,7 @@
 #message{
   color:white;
   width: 100%;
-  background-color: #072e33;
+  background-color: #05161A;
 }
 
 #stripe{

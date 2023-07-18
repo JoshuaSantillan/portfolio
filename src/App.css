@@ -47,19 +47,32 @@ html {
   transform: translateY(0);
 }
 
+
+/*
+  font-size: 40px;
+  color: #29a9d1;
+  align-items: center;
+  text-shadow: 1px 1px 1px #233832, 
+  1px 1px 6px rgb(109, 143, 142); 
+  font-family: 'Poiret One', 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif;
+  */
+
 .title-color{
-  color:#ffb82b !important;
-  font-family: 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
-  font-style: italic !important;
-  text-shadow: 1px 1px 1px #000, 
-  1px 1px 6px brown; 
+  font-size: 50px;
+  color: #29a9d1;
+  align-items: center;
+  text-shadow: 1px 1px 1px #23745d, 
+  1px 1px 6px rgb(115, 225, 222); 
+  font-family: 'Poiret One', 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
 
 .accent-1{
-  font-size: 35px;
-  color: #b2c43d;
-  align-items: center;
-  font-family: 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif;
+  color:#3ee49c !important;
+  font-family: 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
+  font-style: italic !important;
+  text-shadow: 1px 1px 1px #233832, 
+  1px 1px 6px rgb(109, 143, 142); 
+  font-size: 30px;
 }
 .accent-2{
   font-style:normal !important;
@@ -67,7 +80,7 @@ html {
   font-family: 'Sacramento', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
 }
 .accent-3{
-  color: #e6e065;
+  color: #e4d459;
 }
 
 

@@ -4,7 +4,7 @@ import '../style/Backlog.css'
 function Backlog() {
   return (
     <div className="backlog-page text-center text-white">
-      <h2 className="backlog-title title-color"><span className="accent-2">B</span>acklog</h2>
+      <h2 className="backlog-title title-color">backlog</h2>
       <div className="shiftCenter">
         <ul className="todo-list">
           <li>Fix Circular Component Dependecy on Project Page</li>

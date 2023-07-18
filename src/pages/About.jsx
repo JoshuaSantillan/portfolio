@@ -9,13 +9,13 @@ function About() {
         {/* Image and social icons column */}
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
           <img src={process.env.REACT_APP_PORTFOLIO_ABOUT_IMAGE} alt="Profile" className="profile-image img-fluid rounded" />
-          <span className="accent-1">Joshua Santillan</span>
+          <span className="accent-1"><span className="accent-2">J</span>oshua <span className="accent-2">S</span>antillan</span>
           {/* Social Medias */}
           <SocialMediaNav />
         </div>
         {/* About Text*/}
         <div className="col-lg-8 col-md-6 col-sm-12">
-          <h2 className="about-title title-color"><span className="accent-2">A</span>bout <span className="accent-2">M</span>e</h2>
+          <h2 className="about-title title-color">About Me</h2>
           <div className="about-me-text">
             <p>Hi! My name is <span className="accent-3">Joshua</span> and I like turtles 🐢</p>
 

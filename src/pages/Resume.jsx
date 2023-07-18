@@ -57,7 +57,7 @@ function Resume() {
 
   return (
     <div className="container-fluid resume-page container">
-          <h2 className="resume-title mt-1 title-color"><span className="accent-2">R</span>esume</h2>
+          <h2 className="resume-title mt-1 title-color">resume</h2>
 
       <div className="row resume-row">
 

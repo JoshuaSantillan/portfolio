@@ -2,12 +2,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import './ColorGame.css'
 function ColorGame() {
-  const [numSquares, setNumSquares] = useState(6);
-  const [colors, setColors] = useState([]);
-  const [pickedColor, setPickedColor] = useState('');
-  const [message, setMessage] = useState('');
-  const [titleColor, setTitleColor] = useState('#356b74');
-  const generateRandomColor = useCallback(() => {
+    const [numSquares, setNumSquares] = useState(6);
+    const [colors, setColors] = useState([]);
+    const [pickedColor, setPickedColor] = useState('');
+    const [message, setMessage] = useState('');
+    const [titleColor, setTitleColor] = useState('#072e33');
+    const generateRandomColor = useCallback(() => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
@@ -29,7 +29,7 @@ function ColorGame() {
     setColors(newColors);
     setPickedColor(newPickedColor);
     setMessage('');
-     setTitleColor('#356b74');
+    setTitleColor('#072e33');
   }, [generateRandomColors, numSquares]);
 
 
@@ -45,7 +45,7 @@ function ColorGame() {
       setTitleColor(color);
     } else {
       setMessage("Sorry, Guess Again");
-      setColors(colors.map(c => c === color ? '#072e33' : c));
+      setColors(colors.map(c => c === color ? '#05161A' : c));
     }
   };
 
