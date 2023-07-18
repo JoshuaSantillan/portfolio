@@ -77,7 +77,7 @@ const ProjectsGallery = () => {
       >
         <div>
           {selectedProject && (
-            <button className="filter-button" onClick={() => setSelectedProject(null)}>
+            <button className="filter-button filter-clicked" onClick={() => setSelectedProject(null)}>
               Back to projects
             </button>
           )}

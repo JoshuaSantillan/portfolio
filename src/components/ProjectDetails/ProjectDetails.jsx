@@ -34,6 +34,22 @@ export const projects = [
     summary: 'Fragment Shader',
   },
   {
+    name: "Rigging & Animation",
+    tags: ['OpenGL', 'C++'],
+    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_IMAGE_1,
+    images: [
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL5_IMAGE_0,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL5_IMAGE_1,
+      process.env.REACT_APP_PORTFOLIO_PROJECTGL5_IMAGE_2
+    ],
+    imageDescriptions: [],
+    videos: [process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_0, process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_1, process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_2],
+    videoDescriptions: [],
+    pdfs: [],
+    pdfDescriptions: [''],
+    summary: 'This Project Needs more Description',
+  },
+  {
     name: "Particle System",
     tags: ['Houdini'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI1_IMAGE_0,
@@ -44,6 +60,25 @@ export const projects = [
     pdfs: [],
     pdfDescriptions: [],
     summary: 'Summary for FireWork particle simulator',
+  },
+  {
+    name: "Decarbonizing Clouds",
+    tags: ['Research'],
+    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_0,
+    images: [
+      process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_1,
+      process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_2,
+      process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_3,
+      process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_4,
+      process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_5,
+      process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_6
+    ],
+    imageDescriptions: [],
+    videos: [],
+    videoDescriptions: [],
+    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_PDF_0, process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_PDF_1],
+    pdfDescriptions: ['White Paper', 'Technical Description'],
+    summary: 'This Project needs more detail',
   },
   {
     name: "Cloth Simulation",

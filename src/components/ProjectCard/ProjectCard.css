@@ -37,9 +37,7 @@
   background-color: #393e46;
 }
 
-
 /* Card Styles */
-
 .card {
   padding-top: 15px;
   margin-top: 1.5rem;
@@ -48,6 +46,7 @@
   background: rgba(0, 0, 0, .2) !important;
   backdrop-filter: blur(10px);
   box-shadow: 0px 2px 10px rgba(23, 237, 169, 0.7);
+
 }
 /* background outline Animation*/
 .card:hover{
