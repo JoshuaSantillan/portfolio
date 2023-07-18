@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     name: "Fragment Shader",
-    tags: ['OpenGL'],
+    tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_1,
     images: [
       process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_0,
@@ -62,7 +62,7 @@ export const projects = [
   },
   {
     name: "Subdivision",
-    tags: ['OpenGL'],
+    tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1,
     images: [
       process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_0
@@ -85,7 +85,7 @@ export const projects = [
   },
   {
     name: "Local Illumination",
-    tags: ['OpenGL'],
+    tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_0,
     images: [
       process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_3,
@@ -103,7 +103,7 @@ export const projects = [
   },
   {
     name: "Shadow Mapping",
-    tags: ['OpenGL'],
+    tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_0,
     images: [
       process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_1,
@@ -123,7 +123,7 @@ export const projects = [
   {
     name: "Network Simulator",
     summary: 'ERSP 2020 - Presentation',
-    tags: ['Research'],
+    tags: ['Research', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_IMAGE_0,
     images: [],
     imageDescriptions: ['This is an image of Network Simulator project'],

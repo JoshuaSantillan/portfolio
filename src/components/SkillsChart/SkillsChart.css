@@ -5,7 +5,7 @@
   border-radius: 10px;
   background: rgba(0, 0, 0, .5) !important;
   backdrop-filter: blur(10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 2px 10px rgba(23, 237, 169, 0.7);
   padding-bottom: 60px;
 }
 
@@ -14,7 +14,10 @@
   margin-bottom: 20px;
   text-align: center;
 }
-
+.skills-title::first-letter{
+  font-family:  'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
+  font-size: 34px;
+}
 .skills-list {
   list-style: none;
   padding: 0;
@@ -22,10 +25,11 @@
 
 .skill-item {
   margin-bottom: 10px;
+  font-family:  'Poppins', 'roboto', 'Poppins', sans-serif !important;
 }
 
 .skill-name {
-  color: #ffb82b;
+  color: #E4E2DF;
   font-size: 18px;
 }
 

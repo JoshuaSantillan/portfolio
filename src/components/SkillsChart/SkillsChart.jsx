@@ -52,7 +52,7 @@ const SkillsChart = () => {
             style={{
               backgroundColor: group === activeGroup ? '#393e46' : '#0C7075',
               borderColor: group === activeGroup ? '#393e46' : '#072E33',
-              color: group === activeGroup ? '#b3f1f9' : "#fff",
+              color: group === activeGroup ? '#E4E2DF' : "#fff",
 
             }}
             className={`btn skill-btn skill-group ${group === activeGroup ? 'active' : ''}`}

@@ -59,7 +59,7 @@ html {
   font-size: 35px;
   color: #b2c43d;
   align-items: center;
-  font-family: Mynerve, 'Montserrat', 'roboto', 'Poppins', sans-serif;
+  font-family: 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif;
 }
 .accent-2{
   font-style:normal !important;
@@ -67,7 +67,7 @@ html {
   font-family: 'Sacramento', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
 }
 .accent-3{
-  color: #b2c43d;
+  color: #e6e065;
 }
 
 

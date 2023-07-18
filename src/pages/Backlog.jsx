@@ -7,8 +7,7 @@ function Backlog() {
       <h2 className="backlog-title title-color"><span className="accent-2">B</span>acklog</h2>
       <div className="shiftCenter">
         <ul className="todo-list">
-          <li>Finish Color Swatch Theme</li>
-          <li>Gradient cards</li>
+          <li>Fix Circular Component Dependecy on Project Page</li>
           <li>Finish Project Details</li>
           <li>Super Topic Secret Three.js Background</li>
           <li>Footer</li>
