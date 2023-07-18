@@ -11,8 +11,8 @@
   width: 50px;
   height: 50px;
   font-size: 24px;
-  color: #e6e065 !important;
-  background: #05161A;
+  color: #ffffff !important;
+  background: #393e46;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -20,7 +20,7 @@
 }
 .burger:hover {
   transform: scale(1.1);
-  background: #0C7075;
+  background: #393e46;
   color: #fff !important;
 }
 
@@ -48,7 +48,8 @@
 
 .nav-page.open {
   transform: translateX(0);
-  background-color: #05161A;
+  background-color: #050f12;
+  opacity: .93;
 }
 
 .nav-page .close-nav {
@@ -67,7 +68,7 @@
 
 .nav-desktop ul {
   display: flex;
-  background-color: #05161A;
+  background-color: #072e33;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -90,7 +91,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: #0C7075;
+  background-color: #393e46;
 }
 
 nav ul li a {
@@ -101,14 +102,6 @@ nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
   box-sizing: border-box;
-}
-
-nav ul li.active {
-  background-color: #0C7075;
-}
-
-nav ul li.active:hover {
-  background-color: #0C7075;
 }
 
 /* Media query for screens larger than 768px */
