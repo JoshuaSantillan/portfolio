@@ -8,10 +8,8 @@ function Backlog() {
       <div className="shiftCenter">
         <ul className="todo-list">
           <li>Fix Circular Component Dependecy on Project Page</li>
-          <li>Finish Project Details</li>
-          <li>Super Topic Secret Three.js Background</li>
-          <li>Footer</li>
-          <li>Link to other people's sites</li>
+          <li>Finish Project Detail Information</li>
+          <li>Finish `Secret` Three.js Background</li>
           <li>Fix Router to work on GH Pages or buy domain</li>
         </ul>
       </div>

@@ -25,8 +25,8 @@ function About() {
 
             <p>My curiosity with <span className="accent-3">how the internet connects us together is what triggered my interest in Computer Science</span>. I wanted to know how data was encrypted then sent over the wire and how to create secure systems that could talk to each other. My <span className="accent-3">interests in Computer Science</span> lie within the range of <span className="accent-3">distributed systems, virtualization, and security</span>. My education had a deep focus in systems and networking and my research has allowed me to explore the world of distributed systems through container orchestration and deploying jobs based on unique paramaters.</p>
 
-            <p> Outside of desk work and programming <span className="accent-3">I enjoy playing video games such as Terraria, World of Warcraft and CS:GO.</span> I like exploring nature and pretending that technology hasn't been invented yet, grabbing boba <span className="accent-3">(taro milk tea with no boba)</span>,
-              listening to trance music, or fabricating never-before-seen memes... wait, don't you have to be at your computer for that?
+            <p> Outside of desk work and programming <span className="accent-3">I'm a fan of playing video games such as Terraria, World of Warcraft and CS:GO.</span> I enjoy exploring nature and pretending that technology hasn't been invented yet, grabbing some boba (aka <span className="accent-3">taro milk tea</span> with <u>no</u> boba),
+              listening to trance music, or fabricating never-before-seen memes.
             </p>
           </div>
 
