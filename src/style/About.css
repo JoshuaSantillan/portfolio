@@ -1,32 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 .container {
   overflow: visible;
-  padding-bottom: 80px;
+  padding-bottom: 80px; 
 }
-
 .about-page {
-  font-family: 'Montserrat', 'Roboto', 'Poppins', sans-serif;
+  font-size: 18px;
 }
 
 .about-title {
-  color: white;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .profile-image {
   width: 70%;
   margin-top: 10px;
-}
-
-
-.prototype-text {
-  text-align: center;
-  white-space: nowrap;
-  font-size: 20px;
-  color: #6DA5C0;
 }
 
 .about-me-text {

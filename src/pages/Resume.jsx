@@ -56,8 +56,9 @@ function Resume() {
   }, []);
 
   return (
-    <div className="container-fluid resume-page">
-      <h2 className="resume-title mt-1">Resume</h2>
+    <div className="container-fluid resume-page container">
+          <h2 className="resume-title mt-1 title-color"><span className="accent-2">R</span>esume</h2>
+
       <div className="row resume-row">
 
         <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">

@@ -24,7 +24,7 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
                         <NavLink to="/backlog" activeclassname="active">Backlog</NavLink>
                     </li>
                     <li>
-                    <NavLink to="/testparticles" activeclassName="active">Particles</NavLink>
+                    <NavLink to="/testparticles" activeclassname="active">Particles</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -44,7 +44,7 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
                         <NavLink to="/backlog" activeclassname="active">Backlog</NavLink>
                     </li>
                     <li>
-                    <NavLink to="/testparticles" activeclassName="active">Particles</NavLink>
+                    <NavLink to="/testparticles" activeclassname="active">Particles</NavLink>
                     </li>
                 </ul>
             </nav>

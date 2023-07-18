@@ -8,13 +8,13 @@
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  font-family: 'Roboto', 'Montserrat', 'Poppins', sans-serif !important;
 }
 
 body,
 html {
   overflow-x: hidden;
   /* Hide horizontal scrollbar on the whole page */
+  font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
 }
 
 /* Individual components */
@@ -46,3 +46,35 @@ html {
   visibility: hidden;
   transform: translateY(0);
 }
+
+.title-color{
+  color:#ffb82b !important;
+  font-family: 'Mynerve', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
+  font-style: italic !important;
+  text-shadow: 1px 1px 1px #000, 
+  1px 1px 6px brown; 
+}
+
+.accent-1{
+  font-size: 35px;
+  color: #b2c43d;
+  align-items: center;
+  font-family: Mynerve, 'Montserrat', 'roboto', 'Poppins', sans-serif;
+}
+.accent-2{
+  font-style:normal !important;
+  font-size: 45px;
+  font-family: 'Sacramento', 'Montserrat', 'roboto', 'Poppins', sans-serif !important;
+}
+.accent-3{
+  color: #b2c43d;
+}
+
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*/

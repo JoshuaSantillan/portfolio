@@ -58,8 +58,8 @@ const ProjectsGallery = () => {
           {/* Cards Large, medium and small responsive */}
           <Container fluid className="p-2 card-container">
             <Row className="justify-content-center flex-sm-row">
-              {filteredProjects.map((project, index) => (
-                <Col xs="9" sm="auto" className="text-center">
+              {filteredProjects.map((project, index, test) => (
+                <Col key={project.id} xs="9" sm="auto" className="text-center">
                   <ProjectCard index={index} project={project} onSelect={setSelectedProject} />
                 </Col>
               ))}

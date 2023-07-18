@@ -36,6 +36,7 @@
   pointer-events: none;
   width: max-content;
   overflow: visible;
+  z-index: 20;
 }
 
 .wrapper .icon:hover .tooltip {

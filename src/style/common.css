@@ -1,4 +1,18 @@
 /* common.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mynerve:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter+Tight&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
 .content-container {
   padding-bottom: 90px;
 }
@@ -8,7 +22,7 @@ h2{
 }
 
 @property --angle {
-  syntax: '<angle>';
+    syntax: '<angle>';
   initial-value: 90deg;
   inherits: true;
 }

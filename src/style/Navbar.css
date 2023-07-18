@@ -1,7 +1,7 @@
 /* Burger */
 .burger {
   position: fixed;
-  top: 15px;
+  top: 20px;
   right: 7px;
   z-index: 16;
   display: flex;
@@ -33,15 +33,15 @@
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
   position: fixed;
-  top: 75px;
+  top: 85px;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 45%;
+  height: 42.5%;
   background-color: rgba(5, 22, 26, 0.7);
   z-index: 100;
   padding-right: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   overflow-y: none;
   border-radius: 5%;
 }
@@ -61,7 +61,6 @@
 
 /* Desktop Nav */
 .nav-desktop {
-  font-family: 'Montserrat', 'roboto', 'Poppins', sans-serif;
   z-index: 15;
   position: relative;
 }

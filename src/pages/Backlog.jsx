@@ -4,12 +4,7 @@ import '../style/Backlog.css'
 function Backlog() {
   return (
     <div className="backlog-page text-center text-white">
-      <h2 className="backlog-title">Backlog</h2>
-      <h3 className="todo-title"><br />
-        <a href="https://github.com/JoshuaSantillan/portfolio/tree/main/" target="_blank" without rel="noreferrer">
-        To Do:
-        </a>
-      </h3>
+      <h2 className="backlog-title title-color"><span className="accent-2">B</span>acklog</h2>
       <div className="shiftCenter">
         <ul className="todo-list">
           <li>Finish Color Swatch Theme</li>
