@@ -3,8 +3,8 @@ import './ProjectDetails.css';
 export const projects = [
   {
     name: "Color Game",
+    id: 'color-game',
     tags: ['Javascript'],
-    id: 'colorGame',
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HTML_0,
     images: [
       process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_1,
@@ -19,6 +19,7 @@ export const projects = [
   },
   {
     name: "Fragment Shader",
+    id: 'fragment-shader',
     tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_1,
     images: [
@@ -35,6 +36,7 @@ export const projects = [
   },
   {
     name: "Rigging & Animation",
+    id: 'rigging-animation',
     tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_IMAGE_1,
     images: [
@@ -51,6 +53,7 @@ export const projects = [
   },
   {
     name: "Particle System",
+    id: 'particle-system',
     tags: ['Houdini'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI1_IMAGE_0,
     images: [],
@@ -63,6 +66,7 @@ export const projects = [
   },
   {
     name: "Decarbonizing Clouds",
+    id: 'decarbonizing-clouds',
     tags: ['Research'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_IMG_0,
     images: [
@@ -82,6 +86,7 @@ export const projects = [
   },
   {
     name: "Cloth Simulation",
+    id: 'cloth-simulation',
     tags: ['Houdini'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_IMAGE_0,
     images: [],
@@ -97,6 +102,7 @@ export const projects = [
   },
   {
     name: "Subdivision",
+    id: 'subdivision',
     tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1,
     images: [
@@ -120,6 +126,7 @@ export const projects = [
   },
   {
     name: "Local Illumination",
+    id: 'local-illumination',
     tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_0,
     images: [
@@ -138,6 +145,7 @@ export const projects = [
   },
   {
     name: "Shadow Mapping",
+    id: 'shadow-mapping',
     tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_0,
     images: [
@@ -157,6 +165,7 @@ export const projects = [
   },
   {
     name: "Network Simulator",
+    id: 'network-simulator',
     summary: 'ERSP 2020 - Presentation',
     tags: ['Research', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_IMAGE_0,
@@ -167,7 +176,7 @@ export const projects = [
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_PDF_0, process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_PDF_1, process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_PDF_2],
     pdfDescriptions: ["Motivation", "Proposal", "Final Poster"],
     videoControls: true,
-  },
+  }
 ];
 
 
