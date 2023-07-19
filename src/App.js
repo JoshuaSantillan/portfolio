@@ -6,11 +6,11 @@ import Resume from "./pages/Resume";
 import ProjectsGallery from "./pages/ProjectsGallery";
 import Backlog from "./pages/Backlog";
 import TestParticles from "./pages/TestParticles";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState(""); // Add a state variable to track the current path
+  const [currentPath, setCurrentPath] = useState("");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -28,6 +28,9 @@ function App() {
     }
   }, [currentPath, location.pathname]);
 
+  // GH pages route catch?
+  const RedirectToHome = () => <Navigate to="/" replace />;
+
   return (
     <div className={menuOpen ? "open" : ""}>
       <main>
@@ -39,6 +42,7 @@ function App() {
           <Route path="/projectsgallery" element={<ProjectsGallery />} />
           <Route path="/backlog" element={<Backlog />} />
           <Route path="/testparticles" element={<TestParticles />} />
+          <Route path="/*" element={<RedirectToHome />} />
         </Routes>
       </main>
       <div className="overlay"></div>
