@@ -36,12 +36,12 @@ function App() {
       <main>
         <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <Routes>
-          <Route path={process.env.PUBLIC_URL + "/"} element={<About />} />
-          <Route path={process.env.PUBLIC_URL + "/about"} element={<About />} />
-          <Route path={process.env.PUBLIC_URL + "/resume"} element={<Resume />} />
-          <Route path={process.env.PUBLIC_URL + "/projectsgallery"} element={<ProjectsGallery />} />
-          <Route path={process.env.PUBLIC_URL + "/backlog"} element={<Backlog />} />
-          <Route path={process.env.PUBLIC_URL + "/testparticles"} element={<TestParticles />} />
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projectsgallery" element={<ProjectsGallery />} />
+          <Route path="/backlog" element={<Backlog />} />
+          <Route path="/testparticles" element={<TestParticles />} />
           <Route path="/*" element={<RedirectToHome />} />
         </Routes>
       </main>
