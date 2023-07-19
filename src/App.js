@@ -1,19 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./pages/Navbar";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import ProjectsGallery from "./pages/ProjectsGallery";
 import Backlog from "./pages/Backlog";
-import TestParticles from "./pages/TestParticles"
-import { Routes, Route } from "react-router-dom";
+import TestParticles from "./pages/TestParticles";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState(""); // Add a state variable to track the current path
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location]);
+
+  useEffect(() => {
+    if (currentPath !== location.pathname) {
+      window.scrollTo(0, 0);
+    }
+  }, [currentPath, location.pathname]);
 
   return (
     <div className={menuOpen ? "open" : ""}>

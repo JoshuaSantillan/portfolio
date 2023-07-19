@@ -1,6 +1,8 @@
 /* App.css */
 @import './style/common.css';
 
+@import './style/common.css';
+
 /* Main container */
 .App {
   position: relative;
@@ -25,27 +27,30 @@ html {
   width: 100%;
   height: 100%;
   opacity: 0;
+  pointer-events: none; 
   transition: opacity 0.5s ease-in-out;
 }
 
 .component.active {
   opacity: 1;
+  pointer-events: auto;
 }
-
 
 /* Section Transition */
 .component:not(.active) {
-  pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transform: translateY(-100%);
+  transform: translateY(-5%); 
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+              transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.component.active+.component:not(.active) {
-  visibility: hidden;
+.component.active + .component:not(.active) {
+  visibility: visible;
+  opacity: 0.7; 
   transform: translateY(0);
 }
+
 
 
 /*
@@ -82,12 +87,3 @@ html {
 .accent-3{
   color: #e4d459;
 }
-
-
-/*
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-*/
