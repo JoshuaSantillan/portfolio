@@ -2,7 +2,7 @@
   "name": "resume-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://JoshuaSantillan.github.io/portfolio/",
+  "homepage": "http://JoshuaSantillan.github.io/portfolio",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": " ",
     "@fortawesome/fontawesome-free": "^5.15.3",

@@ -28,23 +28,19 @@ function App() {
     }
   }, [currentPath, location.pathname]);
 
-  const routePath = (path) => {
-    return process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL + path : path;
-  };
-
-  const RedirectToHome = () => <Navigate to={routePath("/")} replace />;
+  const RedirectToHome = () => <Navigate to="/" replace />;
 
   return (
     <div className={menuOpen ? "open" : ""}>
       <main>
         <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <Routes>
-          <Route path={routePath("/")} element={<About />} />
-          <Route path={routePath("/about")} element={<About />} />
-          <Route path={routePath("/resume")} element={<Resume />} />
-          <Route path={routePath("/projectsgallery")} element={<ProjectsGallery />} />
-          <Route path={routePath("/backlog")} element={<Backlog />} />
-          <Route path={routePath("/testparticles")} element={<TestParticles />} />
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projectsgallery" element={<ProjectsGallery />} />
+          <Route path="/backlog" element={<Backlog />} />
+          <Route path="/testparticles" element={<TestParticles />} />
           <Route path="/*" element={<RedirectToHome />} />
         </Routes>
       </main>
