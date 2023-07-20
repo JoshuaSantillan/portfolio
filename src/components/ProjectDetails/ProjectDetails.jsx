@@ -36,7 +36,7 @@ export const projects = [
     ],
     pdfs: [],
     pdfDescriptions: [''],
-    summary: 'Using OPENGL we animate our skeletal object we consider 4 main topics: Skeleton Rigging, Kinematics, Skinning, and Lastly Keyframe Channel Animation. These are responsible for creating the skeletal framework, handling joint movements, skin deformation, and playback loop animation.',
+    summary: 'Using OPENGL to first animate our skeletal object we consider 4 main processes: Skeleton Rigging, Kinematics, Skinning, and Lastly Keyframe Channel Animation. These are responsible for creating the skeletal framework, handling joint movements, skin deformation, and playback loop animation.',
   },
    {
     name: "Particle System",
@@ -125,8 +125,8 @@ export const projects = [
     tags: ['OpenGL', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1,
     media: [
-      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_1, description: 'Bezier Curve is parametric and allows us to create tools we see in commercial software such as Photoshop but are also used to produce smooth curves compared to the low resolution polygons', controls: false },
-      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_2, description: 'Subdivison aims to achieve the same smoothness as the Bezier Curve but is done recursively and are subdivided into smaller polygons. This technique is also great for rendering meshes such as cloth and sphere meshes.', controls: false },
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_1, description: 'Bezier Curve is parametric and allows us to create tools we see in commercial software such as Photoshop but are also is used to produce smooth curves compared to the low resolution polygons', controls: false },
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_2, description: 'Subdivison aims to achieve the same smoothness as the Bezier Curve but is done recursively and is subdivided into smaller polygons. This technique is also great for rendering smooth surface meshes such as spheres or ellipsoids.', controls: false },
       { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_0, description: 'Unlike the Bezier Curve, the B Splines allow knot vectors which help determine the influence of all the control points and represent surfaces the Bezier Curve cannot such as Circles and Ellipses. They are affine invariance (preserve properties when scaled/translated/rotated)', controls: false },
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1, caption: '' },
     ],
