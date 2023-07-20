@@ -58,7 +58,7 @@ function ColorGame() {
   return (
     <>
       <div className="color-title text-white" style={{ backgroundColor: titleColor }}>
-        <h1 className="text-center">
+        <h1 className="text-center color-header">
           Pick The Correct <br />
           <span id="colorDisplay" className="text-nowrap text-flud">{pickedColor}</span>
           <br />

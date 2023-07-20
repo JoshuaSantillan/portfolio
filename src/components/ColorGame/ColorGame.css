@@ -8,7 +8,11 @@
 }
 
 #colorDisplay {
-  font-size: 4vw;
+  font-size: 8vw;
+}
+.color-header{
+  padding-top: 5px;
+  font-size: 3vw;
 }
 
 .selected{
@@ -46,7 +50,7 @@
 .cg-container{
   max-width: 550px;
   margin: auto;
-  margin-bottom: 70px;  /* Adjust as needed depending on the size of your navbar */
+  margin-bottom: 70px; 
 }
 @media (min-width: 768px) { /* for medium screens and up */
   .cg-container {
@@ -93,7 +97,10 @@
 /* Set a minimum and maximum font size for the color display */
 @media screen and (min-width: 1200px) {
   #colorDisplay {
-    font-size: 36px;
+    font-size: 50px;
+  }
+  .color-header{
+    font-size: 25px;
   }
 }
 
