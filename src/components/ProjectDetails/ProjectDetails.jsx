@@ -31,7 +31,7 @@ export const projects = [
     media: [
       {type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_0, description: "The Skeleton Class uses a hierarchical joint structure where each joint has its own local and world transformation matrices. A joint knows its parent and maintains a list of its own children. With this structure we can use a depth-first search (DFS) traversal to calculates the world transformation matrix for each joint by multiplying the parent's world matrix with the child joint's local matrix resulting in forward and inverse kinematics", controls: false},
       {type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_IMAGE_1, caption: ''},
-      {type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_1, description: "Each joint is a 3-DOF(Degree of Freedom) rotational joint, allowing rotation in the the x, y,z directions. By mapping joints to their DOF pointer we can create an interactive GUI for users to control. Skinning is done by 'binding' itself to the underlying skeleton class. This can be achieved by using the Skeletal Subspace Deformation algorithm. The skin vertices' position matrix are calculated by taking a weighted average of each connected joint's world space matrix.", controls: false},
+      {type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_1, description: "Each joint is a 3-DOF(Degree of Freedom) rotational joint, allowing rotation in the the x, y, z directions. By mapping joints to their DOF pointer we can create an interactive GUI for users to control. Skinning is done by 'binding' itself to the underlying skeleton class. This can be achieved by using the Skeletal Subspace Deformation algorithm. The skin vertices' position matrices are calculated by taking a weighted average of each connected joint's world space matrix.", controls: false},
       {type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL5_VIDEO_2, description: 'A Keyframe class is created to store certain poses for a skeleton object during a particular time interval. During the playback, each frame uses a cubic spline interpolation between the nearest keyframes so that joints are rendered and rotate smoothly. Interpolation guarantees that the local transformation of each joints are updated which will also trigger the skin deformation to update as well.', controls: false},
     ],
     pdfs: [],
@@ -65,9 +65,9 @@ export const projects = [
     ],
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_PDF_0, process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH3_PDF_1],
     pdfDescriptions: ['White Paper', 'Technical Description'],
-    summary: '"What if we could take an edge-cloud latency sensitive task from city A and move it to a new datacenter in city B when carbon intensity is too high in city A?" If we could find a way, without disrupting the user, that could take latency-sensitive tasks that needed to be computed in real time (such as autonomous vehicles, cloud-hosted gaming machines, and Wireless XR/VR solutions) and move them somewehere else? then we could for sure do it for all regular cloud operations. This is the question that lead to my participation in this cutting-edge project. The motivation behind this project is to achieve Net Zero in datacenters; meaning the amount of carbon emission datacenters cause on the earth would be 0 compared to its current 2-3%. The collection and analysis of power grid data across the US nation lead to the development of a carbon aware API that would help by returning the carbon intensity of a region given a longitude and langitude. This further evolved into a carbon aware scheduler returning the best optimal regions to run jobs. Our first solution utilizing this API is Green Grader, an eco-friendly autograder that re-implements GradeScope\'s back-end to geographically run grade jobs and compare the carbon metrics of our job compared to it running normally on GradeScope\'s back end which uses a random AWS server.',
+    summary: "The motivation behind this project is to achieve Net Zero in datacenters; meaning the amount of carbon emission datacenters cause on the earth would be 0 compared to its current 2-3%. The first research question we faced was: 'Is it possible to take an edge-cloud latency sensitive task from city A's datacenter and run it in city B's datacenter when carbon intensity is too high in city A?' If we could find a way, without disrupting the user, that could migrate latency-sensitive tasks that needed to be computed in real time (such as autonomous vehicles, cloud-hosted gaming machines, and Wireless XR/VR solutions) then we could assume it would work for regular non-latency sensitive cloud operations. The collection and analysis of power grid data across the US nation lead to the development of a carbon aware API that would help by returning the carbon intensity of a region given a longitude and langitude. This further evolved into a carbon aware scheduler returning the best optimal regions to run jobs. Our first solution utilizing this API is Green Grader, an eco-friendly autograder that re-implements GradeScope's back-end to geographically run jobs and then compare the carbon metrics of our grading solution with GradeScope's back end, which uses a random AWS server.",
   },
-  {
+    {
     name: "Local Illumination",
     id: 'local-illumination',
     tags: ['OpenGL', 'C++'],
@@ -105,7 +105,7 @@ export const projects = [
   {
     name: "Network Simulator",
     id: 'network-simulator',
-    summary: 'ERSP 2020 - Presentation simulating Opera, a dynamic network topology created to reduce traffic congestion which would reduce the overall CO2 caused by datacenter operations. By building numerous network topologies to compare and simulate against Opera, we have ensured Opera to sustain remarkable high-bandwidth and low latency even with straneous workloads such as streaming/uploading multiple 4k videos and training nueral networks using tensorflow with large datasets',
+    summary: 'ERSP 2020 - Presentation simulating Opera, a dynamic network topology created to reduce traffic congestion which would reduce the overall CO2 caused by datacenter operations. By building numerous network topologies to compare and simulate against Opera, we have verified Opera to sustain remarkable high-bandwidth and low latency even with straneous workloads such as streaming/uploading multiple 4k videos and training nueral networks using tensorflow with large datasets',
     tags: ['Research', 'C++'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_RESEARCH1_IMAGE_0,
     media: [
@@ -140,12 +140,12 @@ export const projects = [
     tags: ['Houdini'],
     iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_IMAGE_0,
     media: [
-      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_0, description: '', controls: false },
-      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_1, description: '', controls: false }
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_0, description: "Each vertex of a triangle represents a mass point that is connected to two other vertices acting as our spring dampers. Spring dampering is modeled using Hooke's law (F = -k * x) which states that the force exerted by a spring is proportional to its strain (the change in length divided by the rest length). The resulting stress, or force per unit area,  is calculated by taking the Young's modulus and multiplying it with the strain. When vertices move they exert forces on the spring dampers causing them to stretch or compress but not fold into each other.", controls: false },
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_1, description: "Aerodynamic Drag is calculated by using the Drag Equation (Fd = 0.5 * ρ * V^2 * Cd * ) where ρ represents the fluid density and Cd the drag coefficent. Aerodynamic force is calculated based on the relative velocity of the air and the surface of the cloth, the respective surface area, and the drag coefficient where the resulting force is spread across all triangle vertices creating a vector field for wind. By using a dampering coefficent for each frame calculation we can mimic air resistance. At each time step the acceleration, velocity, and position of each mass point are updated based on the current forces. This is knwon as the Forward Euler integration method. ", controls: false }
     ],
     pdfs: [],
     pdfDescriptions: [],
-    summary: 'Something about Spring Dampers and Aerodynamic Drag here (This project needs more description)',
+    summary: " The process of simulating realistic cloth uses Houdini's scripting langauge, VEX. We use triangles to form the cloth mesh and spring dampers with Hooke's Law to provide elasticity to the mesh. Aerodynamic drag, a force that resists the motion of an object through a fluid (in this case, air), is then calculated to simulate wind. )",
   },
 ];
 

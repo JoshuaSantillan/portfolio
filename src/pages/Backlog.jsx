@@ -6,8 +6,8 @@ function Backlog() {
     <div className="backlog-page text-center text-white">
       <h2 className="backlog-title title-color">backlog</h2>
       <div className="shiftCenter">
+        <p>What's left for Version 1.0:</p>
         <ul className="todo-list">
-          <li>Finish Project Detail Information</li>
           <li>Finish `Secret` Three.js Background</li>
         </ul>
       </div>

@@ -10,7 +10,7 @@ const SkillsChart = () => {
       { name: 'C', level: 68 },
       { name: 'Java', level: 65 },
       { name: 'PHP', level: 55 },
-      { name: 'GO', level: 45 },
+      { name: 'GO', level: 45 }, 
       { name: 'Assembly (x86/ARM)', level: 43 },
     ],
     'Frameworks': [
@@ -23,19 +23,21 @@ const SkillsChart = () => {
       { name: 'GIT', level: 75 },
       { name: 'Docker', level: 68 },
       { name: 'Kubernetes', level: 60 },
+      { name: 'OPENGL', level: 69 },
       { name: 'Wireshark', level: 65 },
       { name: 'John the Ripper', level: 55 },
-      { name: 'Arduino', level: 50 },
 
     ],
     'Skills': [
-      { name: 'Data Structures', level: 85 },
+      { name: 'Calculus', level: 93 },
+      { name: 'Object-Oriented Programming (OOP)', level: 85 },
+      { name: 'Data Structures', level: 83 },
       { name: 'Algorithmic Analysis', level: 80 },
-      { name: 'Object-Oriented Programming (OOP)', level: 80 },
       { name: 'Bash Scripting', level: 75 },
       { name: 'Network Protocols', level: 77 },
-      { name: 'DBMS/SQL', level: 70 },
-
+      { name: 'Performance Optimization', level: 70 },
+      { name: 'DBMS/SQL', level: 67 },
+      { name: 'Packet Sniffing', level: 58 },
     ],
   };
 
