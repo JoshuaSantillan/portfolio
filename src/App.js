@@ -4,7 +4,6 @@ import Navbar from "./pages/Navbar";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import ProjectsGallery from "./pages/ProjectsGallery";
-import Backlog from "./pages/Backlog";
 import TestParticles from "./pages/TestParticles";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
@@ -39,7 +38,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projectsgallery" element={<ProjectsGallery />} />
-          <Route path="/backlog" element={<Backlog />} />
           <Route path="/testparticles" element={<TestParticles />} />
           <Route path="/*" element={<RedirectToHome />} />
         </Routes>

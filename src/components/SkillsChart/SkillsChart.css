@@ -48,9 +48,11 @@
 
 .skill-groups {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 15px;
 }
+
 
 .skill-group {
   color: #fff;
@@ -62,20 +64,17 @@
   text-align: center; 
 }
 
-/* Add media queries */
-@media (max-width: 600px) {
+
+
+@media (max-width: 540px) {
   .skill-group {
-    font-size: 14px; 
-    padding: 5px 10px; 
+    width: calc(50% - 5px); /* each button will take up half the width (minus padding) */
+    margin-bottom: 1%; /* add some vertical spacing between wrapped items */
+    font-size: 12px !important;
   }
+  
 }
 
-@media (max-width: 400px) {
-  .skill-group {
-    font-size: 12px; 
-    padding: 5px; 
-  }
-}
 
 .skill-group:hover {
   background-color: #393e46 !important;
