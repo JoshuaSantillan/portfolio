@@ -33,5 +33,11 @@
 }
 .project-media{
   color:rgb(222, 216, 106);
+}
+.project-pdfs{
+  padding-bottom: 5px;
+}
 
+.project-pdfs a{
+  color: rgb(239, 162, 37);
 }
