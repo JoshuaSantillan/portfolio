@@ -13,11 +13,6 @@ const SkillsChart = () => {
       { name: 'GO', level: 45 }, 
       { name: 'Assembly (x86/ARM)', level: 43 },
     ],
-    'Frameworks': [
-      { name: 'React', level: 75 },
-      { name: 'Ruby on Rails', level: 55 },
-
-    ],
     'Tools': [
       { name: 'Linux/PowerShell', level: 90 },
       { name: 'GIT', level: 75 },
@@ -38,6 +33,11 @@ const SkillsChart = () => {
       { name: 'Performance Optimization', level: 70 },
       { name: 'DBMS/SQL', level: 67 },
       { name: 'Packet Sniffing', level: 58 },
+    ],
+    'Frameworks/Libraries': [
+      { name: 'React', level: 75 },
+      { name: 'Ruby on Rails', level: 55 },
+
     ],
   };
 

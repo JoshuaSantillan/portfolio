@@ -12,7 +12,7 @@ const SocialMediaNav = () => {
       </div>
 
       <div className="icon github" onClick={() => openLink('https://github.com/JoshuaSantillan')}>
-        <span className="tooltip" style={{ backgroundColor: '#181717' }}>GitHub</span>
+        <span className="tooltip" style={{ backgroundColor: '#818485' }}>GitHub</span>
         <img src={process.env.REACT_APP_GH_IMAGE} alt="GitHub" className="img-fluid rounded" />
       </div>
 
