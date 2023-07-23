@@ -34,7 +34,7 @@ const SkillsChart = () => {
       { name: 'DBMS/SQL', level: 67 },
       { name: 'Packet Sniffing', level: 58 },
     ],
-    'Frameworks/Libraries': [
+    'Frameworks': [
       { name: 'React', level: 75 },
       { name: 'Ruby on Rails', level: 55 },
 

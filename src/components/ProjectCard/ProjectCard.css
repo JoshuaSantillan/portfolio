@@ -76,6 +76,18 @@
     font-size: 18px;
   }
 
+  @media (min-width: 376px) {
+    /* for medium screens and up */
+
+    .card{
+      size: 8rem !important;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+  }
 
 @media (min-width: 768px) {
   /* for medium screens and up */

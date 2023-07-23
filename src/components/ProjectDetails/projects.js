@@ -55,6 +55,25 @@ const projects = [
     pdfDescriptions: ["Motivation", "Research Proposal", " Research Final Poster"],
   },
   {
+    name: "Cloth Simulation",
+    id: 'cloth-simulation',
+    tags: ['Houdini'],
+    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_IMAGE_0,
+    media: [
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_0, description: "Young's modulus measures the stiffness of a material by calculating the strain under stress ->  stress = Y * strain; where Y represents the constant for Young's modulus. Holding cloth up by its two end vertices causes a vertical strain as gravity pulls the cloth downward. The cloth will try to resist using the resistance coefficient by Young's. The higher Young's is the more resistance. When vertices move they exert forces on the springs causing them to stretch or compress but not fold into each other.", controls: false },
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_1, description: "Aerodynamic Drag is calculated by using the Drag Equation (Fd = 0.5 * ρ * V^2 * Cd * ) where ρ represents the fluid density and Cd the drag coefficent. Aerodynamic force is calculated based on the relative velocity of the air and the surface of the cloth, the respective surface area, and the drag coefficient where the resulting force is spread over all of the triangle vertices on the mesh grid. This creates a wind vector field on our cloth's surface. By using a dampering coefficent for each frame calculation we can mimic air resistance. During each time step the acceleration, velocity, and position of each mass point is updated based on the current active forces. This is knwon as the Forward Euler integration method. ", controls: false },
+      { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_IMAGE_1, caption: 'Pin 0 and pin 20 (the two top end points) are pinned and hold the cloth; gravity tries its hardest to pull the grid down. We can see: Each spring damper numbered in blue and the cloth\'s wind surface caused by the aerodynamic drag.' },
+
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_2,  description: "When the fluid (air) interacts with the cloth it creates a vector field on the cloth's surface in the direction of the winds velocity. You can change the viscosity (thickness of the fluid) by tweaking the fluid density coefficient, rho, affecting the aerodynamic drag. Using a denser fluid creates more resistance to the cloth's motion increasing the aerodynamic drag.", controls: false },
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_3,  description: "When our wind has 0 velocity in all XYZ directions, the cloth will simply fall and be held by the damping system. The vector field shows no wind simulating on the surface.", controls: false },
+      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_4,  description: "Under rigorous weather conditions, the damping system is able to hold itself together without folding into itself", controls: false },      
+
+    ],
+    pdfs: [],
+    pdfDescriptions: [],
+    summary: " Simulating realistic cloth using Houdini's scripting language, Vex. Using a grid of triangles to form the cloth mesh, we can attach a spring damper to each connecting vertex simulating elasticity with Hooke's law; more so a generalized version, Young's Modulus. Then Aerodynamic drag, the force that resists the motion of an object through a fluid, is simulated by creating a vector field on the cloth's surface.",
+  },
+  {
     name: "Local Illumination",
     id: 'local-illumination',
     tags: ['OpenGL', 'C++'],
@@ -88,20 +107,6 @@ const projects = [
     pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF0, process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF1],
     pdfDescriptions: ['Technical Description', 'Project Assignment Details'],
     summary: "This project extends Local Illumination by incorporating a shadow component into the Blinn-Phong lighting model. Shadow mapping is a technique used for generating shadows without needing to build an optimized raytracer. It uses a two-pass algorithm where in the first pass it renders the scene from the light's perspective, creating a shadow map (or a depth buffer) and in the second pass, it renders the scene from the camera's PoV. This second pass checks if each point is in shadow by comparing its distance to the light using the shadow map acquired in the first pass."
-  },
-  {
-    name: "Cloth Simulation",
-    id: 'cloth-simulation',
-    tags: ['Houdini'],
-    iconImage: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_IMAGE_0,
-    media: [
-      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_1, description: "Each vertex of a triangle represents a mass point that is connected to two other vertices acting as our spring dampers. Spring damping is modeled using Hooke's law (F = -k * x) which states that the force exerted by a spring is proportional to its strain (the change in length divided by the rest length). The resulting stress, or force per unit area, is calculated by taking Young's modulus and multiplying it with the strain. When vertices move they exert forces on the spring damping causing them to stretch or compress but not fold into each other.", controls: false },
-      { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECT_HOUDINI2_VIDEO_0, description: "Aerodynamic Drag is calculated by using the Drag Equation (Fd = 0.5 * ρ * V^2 * Cd * ) where ρ represents the fluid density and Cd the drag coefficent. Aerodynamic force is calculated based on the relative velocity of the air and the surface of the cloth, the respective surface area, and the drag coefficient where the resulting force is spread across all triangle vertices. This creates a wind vector field on our cloth's surface. By using a dampering coefficent for each frame calculation we can mimic air resistance. During each time step the acceleration, velocity, and position of each mass point is updated based on the current active forces. This is knwon as the Forward Euler integration method. ", controls: false },
-
-    ],
-    pdfs: [],
-    pdfDescriptions: [],
-    summary: " The process of simulating realistic cloth uses Houdini's scripting language, VEX. We use triangles to form the cloth mesh and spring dampers with Hooke's Law to provide elasticity to the mesh. Aerodynamic drag, a force that resists the motion of an object through a fluid (in this case, air), is then calculated to simulate wind.",
   },
   {
     name: "Fragment Shader",
