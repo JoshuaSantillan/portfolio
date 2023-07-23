@@ -88,8 +88,8 @@ const projects = [
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_1, caption: 'Now we can see this all together using the formal definition: I = Iambient + Idiffuse + Ispecular + Iemission, where emission is the scalar that represents the amount of light an individual light object produces.' },
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL1_IMAGE_2, caption: '' }
     ],
-    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL1_PDF0],
-    pdfDescriptions: ['Project Assignment Details'],
+    pdfs: [],
+    pdfDescriptions: [],
     summary: 'Using a DFS scene-builder graph algorithm, the Blinn-Phong shading model, and GLSL for shading, we can render our scene (objects and their respective world-space matrices for 3D positions, materials for texture and colors, etc) and calculate local illumination simultaneously. GLSL helps by running on the GPU which gives the advantage of parallelization.',
   },
   {
@@ -104,8 +104,8 @@ const projects = [
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_4, caption: 'We fix this by adding a bias to the sampled depth values during the comparison process bringing it closer to the light source which reduces the chance of unwanted shadows.' },
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_IMAGE_5, caption: '' }
     ],
-    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF0, process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF1],
-    pdfDescriptions: ['Technical Description', 'Project Assignment Details'],
+    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL_SM_PDF0],
+    pdfDescriptions: ['Technical Description'],
     summary: "This project extends Local Illumination by incorporating a shadow component into the Blinn-Phong lighting model. Shadow mapping is a technique used for generating shadows without needing to build an optimized raytracer. It uses a two-pass algorithm where in the first pass it renders the scene from the light's perspective, creating a shadow map (or a depth buffer) and in the second pass, it renders the scene from the camera's PoV. This second pass checks if each point is in shadow by comparing its distance to the light using the shadow map acquired in the first pass."
   },
   {
@@ -120,8 +120,8 @@ const projects = [
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL3_IMAGE_1, caption: '' },
       { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL3_VIDEO_0, description: '', controls: false },
     ],
-    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL3_PDF_0],
-    pdfDescriptions: ['Project Assignment Details'],
+    pdfs: [],
+    pdfDescriptions: [],
     summary: 'Shader program using OpenGL that computes some of the possible visualizations the Mandelbrot Set, a fractal in mathematics, could produce. It\'s written in GLSL meaning it runs directly on the GPU for faster computation through parallelization.',
   },
   {
@@ -147,8 +147,8 @@ const projects = [
       { type: 'video', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_VIDEO_0, description: 'Unlike the Bezier Curve, the B Splines allow knot vectors which help determine the influence of all the control points and represent surfaces the Bezier Curve cannot such as Circles and Ellipses; they are also affine invariance (preserve properties when scaled/translated/rotated).', controls: false },
       { type: 'image', src: process.env.REACT_APP_PORTFOLIO_PROJECTGL4_IMAGE_1, caption: 'Here we see the same curve under Bezier Conditions compared to the B-Spline full spiral.' },
     ],
-    pdfs: [process.env.REACT_APP_PORTFOLIO_PROJECTGL4_PDF_0],
-    pdfDescriptions: ['Project Write Up'],
+    pdfs: [],
+    pdfDescriptions: [],
     summary: 'Bezier, B-spline, and Sub-Division Curves',
   },
 ]
