@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf/';
 import Modal from 'react-modal';
 import '../style/common.css';
 import '../style/resume.css';
 import SkillsChart from "../components/SkillsChart/SkillsChart";
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
+
 
 Modal.setAppElement('#root');
 
 function Resume() {
   const [showPdf, setShowPdf] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [pageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(.7);
-  // eslint-disable-next-line
-  const [numPages, setNumPages] = useState(null);
+  const [numPages, setNumPages] = useState(1);
   const [buttonClass, setButtonClass] = useState('btn btn-primary mr-2 resume-btn');
 
   const togglePdf = () => {
@@ -26,18 +28,44 @@ function Resume() {
   };
 
 
-
   const handleOpenModal = () => {
+    console.log('modal Open')
+    setPageNumber(1);
+    console.log("page number:" + pageNumber)
     setShowModal(true);
   }
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setPageNumber(1);
   }
 
   function onDocumentLoadSuccess({ numPages }) {
+    console.log('Document loaded, number of pages:', numPages);
+    setPageNumber(1);
     setNumPages(numPages);
   }
+
+  const nextPage = () => {
+    if (pageNumber < numPages) {
+      setPageNumber(prevPageNumber => {
+        const newPageNumber = prevPageNumber + 1;
+        console.log('Clicked next page, new page number:', newPageNumber);
+        return newPageNumber;
+      });
+    }
+  };
+
+  const prevPage = () => {
+    if (pageNumber > 1) {
+      setPageNumber(prevPageNumber => {
+        const newPageNumber = prevPageNumber - 1;
+        console.log('Back button clicked, new page number:', newPageNumber);
+        return newPageNumber;
+      });
+    }
+  };
+
 
   useEffect(() => {
     function handleResize() {
@@ -57,7 +85,7 @@ function Resume() {
 
   return (
     <div className="container-fluid resume-page container">
-          <h2 className="resume-title mt-1 title-color">resume</h2>
+      <h2 className="resume-title mt-1 title-color">resume</h2>
 
       <div className="row resume-row">
 
@@ -72,7 +100,7 @@ function Resume() {
             </button>
 
             {showPdf && (
-              <a href={process.env.REACT_APP_RESUME_PDF} download="joshuaResume2023.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
+              <a href={process.env.REACT_APP_RESUME_PDF1} download="joshuaResume2023.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
                 Download Resume
               </a>
             )}
@@ -80,14 +108,13 @@ function Resume() {
 
           {showPdf && (
             <div className="resume-container justify-content-center" onClick={handleOpenModal}>
-              <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+              <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />
               </Document>
             </div>
           )}
         </div>
       </div>
-
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
@@ -100,11 +127,16 @@ function Resume() {
         overlayClassName="Overlay"
       >
         <div className="resume-container">
-          <Document file={process.env.REACT_APP_RESUME_PDF} onLoadSuccess={onDocumentLoadSuccess}>
+          {pageNumber !== 1 && <FaArrowLeft onClick={prevPage} style={{ position: 'absolute', left: '10px', fontSize: '30px', cursor: 'pointer', zIndex: 9999 }} />}
+          <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} scale={1} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
+          {pageNumber !== numPages && <FaArrowRight onClick={nextPage} style={{ position: 'absolute', right: '10px', fontSize: '30px', cursor: 'pointer' }} />}
         </div>
       </Modal>
+
+
+
 
     </div>
   );
