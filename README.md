@@ -13,7 +13,7 @@ https://joshuasantillan.github.io/portfolio
 │   │   ├── css
 │   │   ├── js
 │   │   └── media
-│   └── (other build assets)
+│   └── 404.html
 |
 ├── src
     ├── App.css
