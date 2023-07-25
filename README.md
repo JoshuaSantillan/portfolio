@@ -94,14 +94,10 @@ This directory contains all the CSS files for the main `pages` of the portfolio.
 In the project directory, you can run:
 - `npm start` : Starts the development server.
 - `npm run build` : Builds the app for production to the `build` folder and copies the `public/404.html` into the `build` folder.
-- `npm test` : Launches the test runner in the interactive watch mode.
-- `npm run eject` : Removes the single build dependency from your project.
 - `npm run predeploy` : Runs the build script before deploying.
 - `npm run deploy` : Deploys the application to GitHub Pages.
-- `npm start` : Runs the app in development mode.
 - `npm test` : Launches the test runner in the interactive watch mode.
-- `npm run build` : Builds the app for production to the `build` folder.
-
+- `npm run eject` : Removes the single build dependency from your project.
 
 
 To learn more about `create-react-app` scripts, you can check out the [Create React App documentation](https://create-react-app.dev/docs/getting-started).
