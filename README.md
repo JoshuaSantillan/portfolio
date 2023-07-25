@@ -15,7 +15,7 @@ https://joshuasantillan.github.io/portfolio
 │   │   └── media
 │   └── (other build assets)
 |
- src
+├── src
     ├── App.css
     ├── App.js
     ├── components
@@ -40,7 +40,7 @@ https://joshuasantillan.github.io/portfolio
     │       └── SocialMediaNav.jsx
     |
     ├── pages
-    │   ├── About.jsx    │   
+    │   ├── About.jsx       
     │   ├── Footer.jsx
     │   ├── Navbar.jsx
     │   ├── ProjectsGallery.jsx
@@ -104,4 +104,4 @@ In the project directory, you can run:
 
 
 
-To learn more about `create-react-app` scripts, you can check out the [Create React App documentation](https://create-react-app.dev/docs/).
+To learn more about `create-react-app` scripts, you can check out the [Create React App documentation](https://create-react-app.dev/docs/getting-started).
