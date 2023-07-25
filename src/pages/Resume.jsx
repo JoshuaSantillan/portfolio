@@ -17,6 +17,8 @@ function Resume() {
   const [scale, setScale] = useState(.7);
   const [numPages, setNumPages] = useState(1);
   const [buttonClass, setButtonClass] = useState('btn btn-primary mr-2 resume-btn');
+  const [showMainPageNextButton, setShowMainPageNextButton] = useState(true);
+
 
   const togglePdf = () => {
     if (!showPdf) {
@@ -33,11 +35,14 @@ function Resume() {
     setPageNumber(1);
     console.log("page number:" + pageNumber)
     setShowModal(true);
+    setShowMainPageNextButton(false);
+
   }
 
   const handleCloseModal = () => {
     setShowModal(false);
     setPageNumber(1);
+    setShowMainPageNextButton(true);
   }
 
   function onDocumentLoadSuccess({ numPages }) {
@@ -107,12 +112,18 @@ function Resume() {
           </div>
 
           {showPdf && (
-            <div className="resume-container justify-content-center" onClick={handleOpenModal}>
-              <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
+    <div className="resume-container justify-content-center" onClick={handleOpenModal}>
+        <div style={{ position: 'relative' }}>
+            {numPages > 1 && showMainPageNextButton && 
+                <FaArrowRight style={{ position: 'absolute', right: '1%', top: '50%', fontSize: '25px', color: '#000000', cursor: 'pointer', zIndex: 9999 }} />
+            }
+            <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />
-              </Document>
-            </div>
-          )}
+            </Document>
+        </div>
+    </div>
+)}
+
         </div>
       </div>
       <Modal
