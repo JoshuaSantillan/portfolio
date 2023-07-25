@@ -14,6 +14,7 @@ https://joshuasantillan.github.io/portfolio
 │   │   ├── js
 │   │   └── media
 │   └── (other build assets)
+|
  src
     ├── App.css
     ├── App.js
@@ -21,7 +22,7 @@ https://joshuasantillan.github.io/portfolio
     │   ├── ColorGame
     │   │   ├── ColorGame.css
     │   │   └── ColorGame.jsx
-    │   ├── Particles    │   │  
+    │   ├── Particles
     │   │   ├── Particles.jsx
     │   │   └── Particles.css
     │   ├── ProjectCard
@@ -37,14 +38,15 @@ https://joshuasantillan.github.io/portfolio
     │   └── SocialMediaNav
     │       ├── SocialMediaNav.css
     │       └── SocialMediaNav.jsx
+    |
     ├── pages
-    │   ├── About.jsx
-    │   ├── Backlog.jsx
+    │   ├── About.jsx    │   
     │   ├── Footer.jsx
     │   ├── Navbar.jsx
     │   ├── ProjectsGallery.jsx
     │   ├── Resume.jsx
     │   └── TestParticles.jsx
+    |
     └── style
         ├── About.css
         ├── Backlog.css
