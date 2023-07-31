@@ -76,7 +76,7 @@ function Resume() {
     function handleResize() {
       let currentScale = window.innerWidth < 768 ? .7 : .75;
       console.log(window.innerHeight);
-      currentScale = (window.innerHeight > 900) ? .95 : currentScale;
+      currentScale = (window.innerHeight > 825) ? .95 : currentScale;
       setScale(currentScale);
     }
 
