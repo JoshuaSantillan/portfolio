@@ -9,6 +9,7 @@
   padding-bottom: 20px;
   transition: box-shadow 0.3s ease-in-out;
   position: relative;
+  
 }
 
 @media (max-width: 768px) {
@@ -24,6 +25,7 @@
 .resume-container .react-pdf__Page canvas {
   max-width: 100%;
   height: auto !important;
+
 }
 
 @media (max-width: 768px) {
@@ -74,10 +76,13 @@
 }
 
 .Modal--after-open {
-  transform: scale(1);
+  transform: scale(.88);
   opacity: 1;
+  margin-top: -70px !important;
 }
-
+.canvas{
+  top: 0 !important;
+}
 .Modal--before-close {
   transform: scale(0.95);
   opacity: 0;

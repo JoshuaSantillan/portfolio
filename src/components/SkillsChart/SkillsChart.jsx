@@ -30,7 +30,6 @@ const SkillsChart = () => {
       { name: 'Algorithmic Analysis', level: 80 },
       { name: 'Bash Scripting', level: 75 },
       { name: 'Network Protocols', level: 77 },
-      { name: 'Performance Optimization', level: 70 },
       { name: 'DBMS/SQL', level: 67 },
       { name: 'Packet Sniffing', level: 58 },
     ],
