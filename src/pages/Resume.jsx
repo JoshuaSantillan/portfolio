@@ -75,6 +75,8 @@ function Resume() {
   useEffect(() => {
     function handleResize() {
       let currentScale = window.innerWidth < 768 ? .7 : .75;
+      console.log(window.innerHeight);
+      currentScale = (window.innerHeight > 900) ? .95 : currentScale;
       setScale(currentScale);
     }
 
