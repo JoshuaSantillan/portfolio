@@ -31,9 +31,7 @@ function Resume() {
 
 
   const handleOpenModal = () => {
-    console.log('modal Open')
     setPageNumber(1);
-    console.log("page number:" + pageNumber)
     setShowModal(true);
     setShowMainPageNextButton(false);
 
@@ -46,7 +44,6 @@ function Resume() {
   }
 
   function onDocumentLoadSuccess({ numPages }) {
-    console.log('Document loaded, number of pages:', numPages);
     setPageNumber(1);
     setNumPages(numPages);
   }
@@ -55,7 +52,6 @@ function Resume() {
     if (pageNumber < numPages) {
       setPageNumber(prevPageNumber => {
         const newPageNumber = prevPageNumber + 1;
-        console.log('Clicked next page, new page number:', newPageNumber);
         return newPageNumber;
       });
     }
@@ -65,7 +61,6 @@ function Resume() {
     if (pageNumber > 1) {
       setPageNumber(prevPageNumber => {
         const newPageNumber = prevPageNumber - 1;
-        console.log('Back button clicked, new page number:', newPageNumber);
         return newPageNumber;
       });
     }
@@ -75,7 +70,6 @@ function Resume() {
   useEffect(() => {
     function handleResize() {
       let currentScale = window.innerWidth < 768 ? .7 : .75;
-      console.log(window.innerHeight);
       currentScale = (window.innerHeight > 825) ? .95 : currentScale;
       setScale(currentScale);
     }
@@ -142,7 +136,7 @@ function Resume() {
         <div className="resume-container">
           {pageNumber !== 1 && <FaArrowLeft onClick={prevPage} style={{ position: 'absolute', left: '10px', fontSize: '30px', cursor: 'pointer', zIndex: 9999 }} />}
           <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
-            <Page pageNumber={pageNumber} scale={1} renderTextLayer={false} renderAnnotationLayer={false} />
+            <Page pageNumber={pageNumber} scale={.86} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
           {pageNumber !== numPages && <FaArrowRight onClick={nextPage} style={{ position: 'absolute', right: '10px', fontSize: '30px', cursor: 'pointer' }} />}
         </div>
