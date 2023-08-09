@@ -12,10 +12,13 @@ Modal.setAppElement('#root');
 
 function Resume() {
   const [showPdf, setShowPdf] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [pageNumber, setPageNumber] = useState(1);
-  const [scale, setScale] = useState(.7);
   const [numPages, setNumPages] = useState(1);
+
+  const [showModal, setShowModal] = useState(false);
+  const [scale, setScale] = useState(.7);
+  const [modalScale] = useState(1);
+
   const [buttonClass, setButtonClass] = useState('btn btn-primary mr-2 resume-btn');
   const [showMainPageNextButton, setShowMainPageNextButton] = useState(true);
 
@@ -66,19 +69,31 @@ function Resume() {
     }
   };
 
-
   useEffect(() => {
     function handleResize() {
-      let currentScale = window.innerWidth < 768 ? .7 : .75;
-      currentScale = (window.innerHeight > 825) ? .95 : currentScale;
-      setScale(currentScale);
+        let currentScale = .7;
+
+        if (window.innerWidth >= 3840) {
+            currentScale = 0.9;
+        } else if (window.innerWidth < 768) {
+            currentScale = 0.7;
+        } else if (window.innerHeight <= 890) {
+            currentScale = 0.8;
+        } else {
+            currentScale = 0.8;  // Defualt size
+        }
+
+        setScale(currentScale);
     }
 
-    window.addEventListener("resize", handleResize);
-    handleResize(); // call this function on mount
+    // Register event and cleanup.
+    window.addEventListener('resize', handleResize);
+    handleResize(); 
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    }
+}, []);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -89,12 +104,12 @@ function Resume() {
       <h2 className="resume-title mt-1 title-color">resume</h2>
 
       <div className="row resume-row">
+      <div className="col-lg-6 col-md-12 order-sm-2 order-md-1">
 
-        <div className="col-lg-6 col-md-12 order-md-2 order-lg-1">
           <SkillsChart />
         </div>
+        <div className="col-lg-6 col-md-12 order-sm-1 order-md-2">
 
-        <div className="col-lg-6 col-md-12 order-md-1 order-lg-2">
           <div className="d-flex mb-2 justify-content-center">
             <button style={{ backgroundColor: showPdf ? '#393e46' : '#0C7075', borderColor: showPdf ? '#05161A' : '#0C7075' }} onClick={togglePdf} className={buttonClass}>
               {showPdf ? "Hide Resume" : "View Resume"}
@@ -136,7 +151,7 @@ function Resume() {
         <div className="resume-container">
           {pageNumber !== 1 && <FaArrowLeft onClick={prevPage} style={{ position: 'absolute', left: '10px', fontSize: '30px', cursor: 'pointer', zIndex: 9999 }} />}
           <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
-            <Page pageNumber={pageNumber} scale={.86} renderTextLayer={false} renderAnnotationLayer={false} />
+            <Page pageNumber={pageNumber} scale={modalScale} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
           {pageNumber !== numPages && <FaArrowRight onClick={nextPage} style={{ position: 'absolute', right: '10px', fontSize: '30px', cursor: 'pointer' }} />}
         </div>
