@@ -38,7 +38,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projectsgallery" element={<ProjectsGallery />} />
-          <Route path="/testparticles" element={<TestParticles />} />
+          <Route path="/particles" element={<TestParticles />} />
           <Route path="/*" element={<RedirectToHome />} />
         </Routes>
       </main>
