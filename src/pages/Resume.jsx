@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Document, Page, pdfjs } from 'react-pdf/';
+import { Document, Page, pdfjs } from 'react-pdf';
 import Modal from 'react-modal';
 import '../style/common.css';
 import '../style/resume.css';
