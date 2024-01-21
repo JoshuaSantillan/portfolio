@@ -9,7 +9,7 @@ const SocialMediaNav = () => {
 
       <div className="icon instagram" onClick={() => openLink('https://leetcode.com/JoshuaSantillan/')}>
         <span className="tooltip" style={{ backgroundColor: '#eaa240' }}>LeetCode</span> 
-        <img src={process.env.REACT_APP_LC_IMAGE} alt="Instagram" className="img-fluid rounded" />
+        <img src={process.env.REACT_APP_LC_IMAGE} alt="Leetcode" className="img-fluid rounded" />
       </div>
 
       <div className="icon spotify" onClick={() => openLink('https://open.spotify.com/user/1215151640?si=325febd571474d3d')}>

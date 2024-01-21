@@ -116,7 +116,7 @@ function Resume() {
             </button>
 
             {showPdf && (
-              <a href={process.env.REACT_APP_RESUME_PDF1} download="joshuaResume2023.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
+              <a href={process.env.REACT_APP_RESUME} download="joshuaResume.pdf" className="btn btn-secondary" rel="noreferrer" target='_blank'>
                 Download Resume
               </a>
             )}
@@ -128,7 +128,7 @@ function Resume() {
             {numPages > 1 && showMainPageNextButton && 
                 <FaArrowRight style={{ position: 'absolute', right: '1%', top: '50%', fontSize: '25px', color: '#000000', cursor: 'pointer', zIndex: 9999 }} />
             }
-            <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
+            <Document file={process.env.REACT_APP_RESUME} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />
             </Document>
         </div>
@@ -150,7 +150,7 @@ function Resume() {
       >
         <div className="resume-container">
           {pageNumber !== 1 && <FaArrowLeft onClick={prevPage} style={{ position: 'absolute', left: '10px', fontSize: '30px', cursor: 'pointer', zIndex: 9999 }} />}
-          <Document file={process.env.REACT_APP_RESUME_PDF1} onLoadSuccess={onDocumentLoadSuccess}>
+          <Document file={process.env.REACT_APP_RESUME} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} scale={modalScale} renderTextLayer={false} renderAnnotationLayer={false} />
           </Document>
           {pageNumber !== numPages && <FaArrowRight onClick={nextPage} style={{ position: 'absolute', right: '10px', fontSize: '30px', cursor: 'pointer' }} />}
