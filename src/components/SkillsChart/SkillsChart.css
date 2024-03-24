@@ -50,7 +50,7 @@
 .skill-groups {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 15px;
 }
 
